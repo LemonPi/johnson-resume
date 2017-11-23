@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+    <title>Johnson Zhong</title>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='main.css' rel='stylesheet' type='text/css'>
+    <style media="print">
+        body, html {
+            background-color: white;
+            padding-top: 1.5em;
+        }
+
+        .paper {
+            width: 100%;
+            border: 0;
+
+            padding-top: 0;
+        }
+
+        header p {
+            font-size: 1.3em;
+        }
+
+        .subtitle {
+            font-size: 0.7em;
+        }
+
+        .header-pic {
+            float: left;
+        }
+
+        .profiles {
+            display: none;
+        }
+
+        .content {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        .header-text {
+            float: left;
+            margin-top: -1.6em;
+        }
+
+        .content-wrapper > .content:first-child {
+            padding-top: 2em;
+        }
+
+        .content:last-child {
+            padding-bottom: 0;
+        }
+
+        .content-cat {
+            width: 33%;
+            color: black;
+            text-align: left;
+        }
+
+        .content-cat p {
+            font-size: 0.6em;
+            font-weight: 600;
+        }
+
+        header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+            color: black;
+        }
+
+        .content-text.skills-listing > ul > li span, .subtitle {
+            color: #212121;
+        }
+
+        .content-text ul:last-child {
+            margin-bottom: 0.25em;
+        }
+
+        .content-text ul li:first-child {
+            width: 50%;
+        }
+
+        .profiles-listing ul li:first-child {
+            width: 32%;
+        }
+
+        div.content-text.skills-listing > ul > li {
+            width: 33%;
+        }
+
+        .work-listing p {
+            margin-bottom: 0.1em;
+        }
+
+        div.content-text.skills-listing > ul > li > p {
+            margin-top: 0.4em;
+            margin-bottom: 0.5em;
+        }
+
+        div.content-text.skills-listing > ul > li {
+            padding-left: 1.5em;
+        }
+
+        div.content-text.skills-listing > ul > li:first-child {
+            padding-left: 2em;
+        }
+
+        .note {
+            display: none;
+        }
+
+        .content-text:hover {
+            border-left: 1px solid #eeeeee;
+        }
+
+        .content-text ul li a:hover {
+            color: #4fc3f7;
+        }
+
+        .highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+            border-left: 1px solid #eeeeee;
+        }
+
+        .big-text {
+            padding-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div class="resume-wrapper">
+    <article class="paper">
+        <header>
+            <div class="header-content">
+                <div class="header-text">
+                    <p>
+                        Johnson <a id="last-name">Zhong</a>
+                    </p>
+                    <p class="subtitle">Robotics Engineering Student</p>
+                </div>
+            </div>
+        </header>
+        <div class="content-wrapper">
+
+            <section class="content">
+                <div class="row">
+                    <div class="content-cat">
+                        Contact
+                    </div>
+                    <div class="content-text">
+                        <ul>
+                            <li>Legal Name</li>
+                            <li>Sheng</li>
+                        </ul>
+                        <ul>
+                            <li>Website</li>
+                            <li><a href="http://johnsonzhong.me">johnsonzhong.me</a></li>
+                        </ul>
+                        <ul>
+                            <li>Email</li>
+                            <li>sh.zhong@mail.utoronto.ca
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Github</li>
+                            <li><a href="https://github.com/lemonpi">github.com/lemonpi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="row">
+                    <div class="content-cat big-text">
+                        Education
+                        <p>2013-09 to 2018-06</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                        <p class="heading" style="margin-top:2.35em;">University of Toronto</p>
+                        <p class="highlight">
+                            B.ASc in Engineering Science Robotics
+                        </p>
+                        <p class="highlight">
+                            Cumulative GPA: <i>3.91/4.0</i>
+                        </p>
+                        <p class="highlight">
+                            Major GPA: <i>4.0/4.0</i>
+                        </p>
+                        <p class="highlight">
+                            <strong>Rank 2</strong>/161 in 3rd year
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="row">
+                    <div class="content-cat big-text">
+                        Research Experience
+                        <p>2017-09 to 2018-05</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                        <p style="margin-top:2.4em;">
+                            <strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun
+                        </p>
+                        <p class="content-caption">Undergraduate Thesis at the Advanced Micro and Nanosystems Laboratory
+                        </p>
+                        <p>Project plan is to:</p>
+                        <p class="highlight">Create simulation of the magnetic system</p>
+                        <p class="highlight">Adapt controllers to a lower visual feedback frequency (30Hz to 4Hz)</p>
+                        <p class="highlight">Design a controller to simultaneously control multiple beads to enable twist manipulation</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-cat big-text">
+                        <p  style="margin-top:2em">2016-05 to 2017-09</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                        <p  style="margin-top:1.1em">
+                            <strong>Verity Studios R&D Engineering Intern</strong> with Prof. Raffaello D'Andrea
+                        </p>
+                        <p class="content-caption">16 months Professional Experience Year, Zurich <a class="reference"
+                                                                                                     href="http://veritystudios.com">veritystudios.com</a>
+                        </p>
+                        <p>Verity Studios is an ETH spinoff specializing in indoor drone show systems.</p>
+                        <p class="highlight">Modelled localization system that gave position updates to drones</p>
+                        <p class="highlight">Estimated localization performance at any point inside any hypothetical
+                            flight space</p>
+                        <p class="highlight">Achieved <strong>0.86 correlation with 95% confidence of >0.8</strong>
+                            against real performance</p>
+                        <p class="highlight">Designed model for computational efficiency and suitability as a cost
+                            function</p>
+                        <p class="highlight">Designed and implemented cross-platform parameters framework</p>
+                        <p class="highlight">Parameters retained stored values intelligibly after firmware updates</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-cat big-text">
+                        <p style="margin-top:2em">2015-05 to 2015-09</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                        <p style="margin-top:1.1em;">
+                            <strong>FPGA CAD Routing Optimization</strong> with Prof. Vaughn Betz
+                        </p>
+                        <p class="content-caption">Summer research with USRA NSERC 5k grant, University of Toronto <a
+                                class="reference" href="http://johnsonzhong.me/projects/vpr">johnsonzhong.me/projects/vpr</a>
+
+                        </p>
+                        <p>Verilog-to-Routing (VTR) is a CAD flow mapping Verilog to FPGAs. Its runtime performance was
+                            bottlenecked by the routing phase for large circuits.</p>
+                        </p>
+                        <p class="highlight">Developed route tree pruning algorithm to allow incremental reroutes,
+                            speeding up routing by up to <strong>3x</strong> on difficult benchmarks</p>
+                        <p class="highlight">Designed targeted rerouting algorithm for critical yet suboptimal
+                            connections, producing up to <strong>30% faster</strong> resulting circuits (maximum
+                            frequency)
+                        </p>
+                        <p class="highlight">Benchmarked over realistic circuits, with speedups scaling with circuit
+                            size</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="row">
+                    <div class="content-cat big-text">
+                        Funding Awarded
+                        <p style="margin-top:0.25em;">2015-05</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p style="margin-top:1.5em">Undergraduate Student Research Awards (USRA) grant from Natural Sciences
+                            and Engineering Research Council of Canada (NSERC) <a class="dollars">6000</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="row">
+                    <div class="content-cat big-text">
+                        Academic Honours
+                        <p style="margin-top:0.25em">2013-09 to 2018-05</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p style="margin-top:1.5em">Shaw Admission Scholarship <a class="dollars">20000</a></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="content-cat big-text" style="padding-top:1em">
+                        Awards
+                        <p style="margin-top:0.25em;">2016-03</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p style="margin-top:2.9em"><strong>1st</strong> in Ontario Engineering Competition Programming
+                            category <a class="dollars">2000</a>
+                            <a class="reference" href="http://johnsonzhong.me/projects/snowfun/">johnsonzhong.me/projects/snowfun</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-cat big-text">
+                        <p>2015-10</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p><strong>1st</strong> in Canada in IEEEXtreme 9.0 (28/6800 globally)
+                            <a class="reference" href="http://johnsonzhong.me/res/ieee9.pdf">johnsonzhong.me/res/ieee9.pdf</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-cat big-text">
+                        <p>2015-01</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p>Context.io API prize in PennApps Winter 2015 <a class="dollars">500</a>
+                            <a class="reference"
+                               href="https://devpost.com/software/snowball">devpost.com/software/snowball</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-cat big-text">
+                        <p>2014-10</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p>8th in Canada in IEEEXtreme 8.0 (52/6500 globally)
+                            <a class="reference" href="http://johnsonzhong.me/res/ieee8.pdf">johnsonzhong.me/res/ieee8.pdf</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-cat big-text">
+                        <p>2014-09</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p>Google Cloud Platform prize in Hack the North 2015 <a class="dollars">1000</a>
+                            <a class="reference" href="https://devpost.com/software/forenships">devpost.com/software/forenships</a></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-cat big-text">
+                        <p>2013-10</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p>6th in Canada in IEEEXtreme 7.0 (43/7500 globally)
+                            <a class="reference"
+                               href="http://johnsonzhong.me/res/ieee.jpg">johnsonzhong.me/res/ieee.jpg</a>
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="content">
+                <div class="row">
+                    <div class="content-cat">
+                        Publications
+                        <p style="margin-top:0.25em;">2018-01</p>
+                    </div>
+                    <div class="content-text work-listing">
+                        <p style="margin-top:3.5em">
+                            Kevin Murray, Oleg Petelin, Jason Luu, Sheng Zhong, Jia Min Wang, Eugene Sha, Ken Kent,
+                            Vaughn Betz.
+                            "VTR 8.0: Highly Customizable FPGA Architecture Evaluation and CAD."
+                            To be submitted to ACM Transactions on Reconfigurable Technology and Systems.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="content">
+                <div class="row">
+                    <div class="content-cat big-text">
+                        Projects
+                        <p>2015-09 to 2015-11</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                        <p style="margin-top:2.2em;">
+                            <strong>Autonomous Cooperating Robots</strong>
+                        </p>
+                        <p class="content-caption">AER201 Design Project in a team of 3
+                            <a class="reference" href="http://johnsonzhong.me/projects/robot/">johnsonzhong.me/projects/robot/</a>
+                        </p>
+                        <p>The task was to design and build a mobile robot to play connect-4 on a semi-randomized game
+                            board.
+                            We decided to pursue a two robots approach, one for retrieving the ball and one for playing
+                            the ball.
+                        </p>
+                        <p class="highlight">Targeted randomly placed high-reward ball dispensers to obtain <strong>fastest
+                            ball retrieval time</strong> (3 ball/min vs average 0.5 ball/min)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-cat big-text">
+                        <p>2014-11 to 2015-09</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                        <p>
+                            <strong>Simple Algorithms and Data Structures Library</strong>
+                        </p>
+                        <p class="content-caption">Personal project
+                            <a class="reference" href="http://johnsonzhong.me/sal/">johnsonzhong.me/sal/</a>
+                        </p>
+                        <p>Header only C++ template library with an interactive tester focused on implementation
+                            readability.</p>
+                        <p class="highlight">Implemented sets and maps with treaps to get <strong>4x insertion and 2x
+                            read</strong>
+                            time improvements over standard library</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="row">
+                    <div class="content-cat">
+                        Languages
+                    </div>
+                    <div class="content-text">
+                        <ul>
+                            <li>Language</li>
+                            <li>Experience [> lines of code]</li>
+                        </ul>
+                        <ul>
+                            <li>C++</li>
+                            <li>50k</li>
+                        </ul>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>10k</li>
+                        </ul>
+                        <ul>
+                            <li>Python</li>
+                            <li>5k</li>
+                        </ul>
+                        <ul>
+                            <li>C</li>
+                            <li>5k</li>
+                        </ul>
+                        <ul>
+                            <li>Java</li>
+                            <li>2k</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </article>
+</div>
+</body>
+</html>
