@@ -2,7 +2,11 @@ body, html {
     padding-top: 2.5em;
     margin: 0;
     background-color: #fafafa;
+    /* hack for globally increasing zoom; easier than adjusting each element */
+    transform: scale(1.1);
+    transform-origin: 50% 10em;
 }
+
 
 .note {
     display: block;
