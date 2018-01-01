@@ -1,0 +1,26 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "my resume and cv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LemonPi/johnson-resume.git"
+  },
+  "keywords": [
+    "resume",
+    "cv"
+  ],
+  "author": "Johnson Zhong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LemonPi/johnson-resume/issues"
+  },
+  "homepage": "https://github.com/LemonPi/johnson-resume#readme",
+  "dependencies": {
+    "handlebars": "^4.0.11"
+  }
+}
