@@ -78,11 +78,11 @@ const researchExperience = {
 };
 
 const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
-const contentTemplate = handlebars.compile(fs.readFileSync('templates/content_section.html',
+const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
     'utf-8'));
 
-const researchHtml = contentTemplate(researchExperience);
-const educationHtml = contentTemplate(education);
+const researchHtml = datedTemplate(researchExperience);
+const educationHtml = datedTemplate(education);
 console.log(researchHtml);
 
 const html = baseTemplate({content: [educationHtml, researchHtml]});
