@@ -18,7 +18,15 @@
                                      href="{{reference.link}}">{{reference.text}}</a>{{/if}}</p>
             {{/if}}
 
-            {{#if desc}}<p>{{desc}}</p>{{/if}}
+            {{#if desc}}
+            <p>
+                {{desc}}
+                {{#if dollar}}<a class="dollars">{{dollar}}</a>{{/if}}
+                {{#unless caption}}{{#if reference}} <a class="reference"
+                                                        href="{{reference.link}}">{{reference.text}}</a>{{/if}}{{/unless}}
+            </p>
+            {{/if}}
+
 
             {{#each highlights}}
             <p class="highlight">{{{this}}}</p>

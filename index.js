@@ -114,6 +114,34 @@ const researchExperience = new ContentSection("Research Experience", {
     ]
 });
 
+const funding = new ContentSection("Funding Awarded", {
+    topDist: FIRST_TEXT_MARGIN,
+    rows   : [
+        {
+            duration: "2015-05",
+            desc    : "Undergraduate Student Research Awards (USRA) " +
+                      "grant from Natural Sciences and Engineering Research Council of Canada (NSERC)",
+            dollar  : 6000
+        }
+    ]
+});
+
+const honours = new ContentSection("Academic Honours", {
+    topDist: FIRST_TEXT_MARGIN,
+    rows   : [
+        {
+            duration: "2013-09 to 2018-05",
+            desc    : "Shaw Admission Scholarship",
+            dollar  : 20000
+        },
+        {
+            duration: "2013-09",
+            desc    : "Walter Scott Guest Memorial Scholarship",
+            dollar  : 5000
+        },
+    ]
+});
+
 const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
 const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
     'utf-8'));
@@ -123,6 +151,17 @@ const researchHtml = datedTemplate(researchExperience);
 const educationHtml = datedTemplate(education);
 const contactHtml = listTemplate(contact);
 const languageHtml = listTemplate(languages);
+const fundingHtml = datedTemplate(funding);
+const honoursHtml = datedTemplate(honours);
 
-const html = baseTemplate({content: [contactHtml, educationHtml, researchHtml, languageHtml]});
+const html = baseTemplate({
+    content: [
+        contactHtml,
+        educationHtml,
+        researchHtml,
+        fundingHtml,
+        honoursHtml,
+        languageHtml
+    ]
+});
 fs.writeFileSync('web/cv.html', html);
