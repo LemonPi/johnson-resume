@@ -90,6 +90,26 @@ const researchExperience = new ContentSection("Research Experience", {
                 "Designed and implemented cross-platform parameters framework",
                 "Parameters retained stored values intelligibly after firmware updates",
             ]
+        },
+        {
+            duration  : "2015-05 to 2015-09",
+            title     : "<strong>FPGA CAD Routing Optimization</strong> with Prof. Vaughn Betz",
+            caption   : "Summer research with USRA NSERC 5k grant, University of Toronto",
+            reference : {
+                link: "http://johnsonzhong.me/projects/vpr",
+                text: "johnsonzhong.me/projects/vpr",
+            },
+            desc      : "Verilog-to-Routing (VTR) is a CAD flow mapping Verilog to FPGAs. " +
+                        "Its runtime performance was bottlenecked by the routing phase for large circuits.",
+            highlights: [
+                "Developed route tree pruning algorithm to allow incremental reroutes, " +
+                "speeding up routing by up to <strong>3x</strong> on difficult benchmarks",
+
+                "Designed targeted rerouting algorithm for critical yet suboptimal connections, " +
+                "producing up to <strong>30% faster</strong> resulting circuits (maximum frequency)",
+
+                "Benchmarked over realistic circuits, with speedups scaling with circuit size",
+            ]
         }
     ]
 });
