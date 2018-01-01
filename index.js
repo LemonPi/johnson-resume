@@ -9,17 +9,18 @@ function em(num) {
     return num + "em";
 }
 
-const FIRST_TEXT_MARGIN = em(2.4);
+const FIRST_TEXT_MARGIN = em(2.2);
 const AFTER_FIRST_TEXT_MARGIN = em(1.1);
-const AFTER_FIRST_DATE_MARGIN = em(2);
 
 class ContentSection {
     constructor(type, ...content) {
-        Object.assign(this, ...content, {
-            contentType: type,
-            AFTER_FIRST_TEXT_MARGIN,
-            AFTER_FIRST_DATE_MARGIN,
-        });
+        Object.assign(this, {
+            contentType         : type,
+            afterFirstTextMargin: AFTER_FIRST_TEXT_MARGIN,
+        }, ...content);
+
+        // TODO replace 0.8 with font size
+        this.afterFirstDateMargin = em(0.8 + parseFloat(this.afterFirstTextMargin));
     }
 }
 
@@ -127,8 +128,9 @@ const funding = new ContentSection("Funding Awarded", {
 });
 
 const honours = new ContentSection("Academic Honours", {
-    topDist: FIRST_TEXT_MARGIN,
-    rows   : [
+    topDist             : FIRST_TEXT_MARGIN,
+    afterFirstTextMargin: 0,
+    rows                : [
         {
             duration: "2013-09 to 2018-05",
             desc    : "Shaw Admission Scholarship",

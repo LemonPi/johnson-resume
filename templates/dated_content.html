@@ -3,13 +3,13 @@
     <div class="row">
         <div class="content-cat big-text">
             {{#if @first}}{{../contentType}}{{/if}}
-            <p {{#unless @first}}style="margin-top:{{../AFTER_FIRST_DATE_MARGIN}}" {{/unless}}>
+            <p {{#unless @first}}style="margin-top:{{../afterFirstDateMargin}}" {{/unless}}>
             {{duration}}</p>
         </div>
         <div class="content-text work-listing education-listing">
             <p style="margin-top:
             {{#if @first}}{{../topDist}}
-            {{else}}{{../AFTER_FIRST_TEXT_MARGIN}}{{/if}}">
+            {{else}}{{../afterFirstTextMargin}}{{/if}}">
                 {{{title}}}</p>
 
             {{#if caption}}
