@@ -1,0 +1,15 @@
+<section class="content">
+    <div class="row">
+        <div class="content-cat">
+            {{contentType}}
+        </div>
+        <div class="content-text">
+            {{#each pairs}}
+            <ul>
+                <li>{{@key}}</li>
+                <li>{{{this}}}</li>
+            </ul>
+            {{/each}}
+        </div>
+    </div>
+</section>

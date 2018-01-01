@@ -22,6 +22,16 @@ class ContentSection {
     }
 }
 
+const contact = {
+    contentType: "Contact",
+    pairs      : {
+        "Legal Name": "Sheng",
+        Website     : "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
+        Email       : "sh.zhong@mail.utoronto.ca",
+        Github      : "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
+    }
+};
+
 const education = new ContentSection({
     contentType: "Education",
     topDist    : FIRST_TEXT_MARGIN,
@@ -39,10 +49,8 @@ const education = new ContentSection({
     ]
 });
 
-const researchExperience = {
+const researchExperience = new ContentSection({
     contentType: "Research Experience",
-    AFTER_FIRST_DATE_MARGIN,
-    AFTER_FIRST_TEXT_MARGIN,
     topDist    : FIRST_TEXT_MARGIN,
     rows       : [
         {
@@ -75,15 +83,16 @@ const researchExperience = {
             ]
         }
     ]
-};
+});
 
 const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
 const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
     'utf-8'));
+const listTemplate = handlebars.compile(fs.readFileSync('templates/list_content.html', 'utf-8'));
 
 const researchHtml = datedTemplate(researchExperience);
 const educationHtml = datedTemplate(education);
-console.log(researchHtml);
+const contactHtml = listTemplate(contact);
 
-const html = baseTemplate({content: [educationHtml, researchHtml]});
+const html = baseTemplate({content: [contactHtml, educationHtml, researchHtml]});
 fs.writeFileSync('web/cv.html', html);
