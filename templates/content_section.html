@@ -1,0 +1,29 @@
+<section class="content">
+    {{#each rows}}
+    <div class="row">
+        <div class="content-cat big-text">
+            {{#if @first}}{{../contentType}}{{/if}}
+            <p {{#unless @first}}style="margin-top:{{../AFTER_FIRST_DATE_MARGIN}}" {{/unless}}>
+            {{duration}}</p>
+        </div>
+        <div class="content-text work-listing education-listing">
+            <p style="margin-top:
+            {{#if @first}}{{../topDist}}
+            {{else}}{{../AFTER_FIRST_TEXT_MARGIN}}{{/if}}">
+                {{{title}}}</p>
+
+            {{#if caption}}
+            <p class="content-caption">{{caption}}
+                {{#if reference}} <a class="reference"
+                                     href="{{reference.link}}">{{reference.text}}</a>{{/if}}</p>
+            {{/if}}
+
+            {{#if desc}}<p>{{desc}}</p>{{/if}}
+
+            {{#each highlights}}
+            <p class="highlight">{{{this}}}</p>
+            {{/each}}
+        </div>
+    </div>
+    {{/each}}
+</section>
