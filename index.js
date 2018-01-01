@@ -144,6 +144,65 @@ const honours = new ContentSection("Academic Honours", {
     ]
 });
 
+const awards = new ContentSection("Awards", {
+    topDist             : FIRST_TEXT_MARGIN,
+    afterFirstTextMargin: 0,
+    rows                : [
+        {
+            duration : "2016-03",
+            desc     : "<strong>1st</strong> in Ontario Engineering Competition Programming category",
+            dollar   : 2000,
+            reference: {
+                link: "http://johnsonzhong.me/projects/snowfun/",
+                text: "johnsonzhong.me/projects/snowfun",
+            },
+        },
+        {
+            duration : "2015-10",
+            desc     : "<strong>1st</strong> in Canada in IEEEXtreme 9.0 (28/6800 globally)",
+            dollar   : 2000,
+            reference: {
+                link: "http://johnsonzhong.me/res/ieee9.pdf",
+                text: "johnsonzhong.me/res/ieee9.pdf",
+            },
+        },
+        {
+            duration : "2015-01",
+            desc     : "Context.io API prize in PennApps Winter 2015",
+            dollar   : 500,
+            reference: {
+                link: "https://devpost.com/software/snowball",
+                text: "devpost.com/software/snowball",
+            },
+        },
+        {
+            duration : "2014-10",
+            desc     : "8th in Canada in IEEEXtreme 8.0 (52/6500 globally)",
+            reference: {
+                link: "http://johnsonzhong.me/res/ieee8.pdf",
+                text: "johnsonzhong.me/res/ieee8.pdf",
+            },
+        },
+        {
+            duration : "2014-09",
+            desc     : "Google Cloud Platform prize in Hack the North 2015",
+            dollar   : 1000,
+            reference: {
+                link: "https://devpost.com/software/forenships",
+                text: "devpost.com/software/forenships",
+            },
+        },
+        {
+            duration : "2013-10",
+            desc     : "6th in Canada in IEEEXtreme 7.0 (43/7500 globally)",
+            reference: {
+                link: "http://johnsonzhong.me/res/ieee.jpg",
+                text: "johnsonzhong.me/res/ieee.jpg",
+            },
+        },
+    ]
+});
+
 const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
 const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
     'utf-8'));
@@ -155,6 +214,7 @@ const contactHtml = listTemplate(contact);
 const languageHtml = listTemplate(languages);
 const fundingHtml = datedTemplate(funding);
 const honoursHtml = datedTemplate(honours);
+const awardsHtml = datedTemplate(awards);
 
 const html = baseTemplate({
     content: [
@@ -163,6 +223,7 @@ const html = baseTemplate({
         researchHtml,
         fundingHtml,
         honoursHtml,
+        awardsHtml,
         languageHtml
     ]
 });
