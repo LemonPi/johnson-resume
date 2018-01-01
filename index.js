@@ -203,6 +203,19 @@ const awards = new ContentSection("Awards", {
     ]
 });
 
+const publications = new ContentSection("Publications", {
+    topDist: FIRST_TEXT_MARGIN,
+    rows   : [
+        {
+            duration: "2018-01",
+            desc    : 'Kevin Murray, Oleg Petelin, Jason Luu, Sheng Zhong, ' +
+                      'Jia Min Wang, Eugene Sha, Ken Kent, Vaughn Betz. ' +
+                      '"VTR 8.0: Highly Customizable FPGA Architecture Evaluation and CAD." ' +
+                      'To be submitted to ACM Transactions on Reconfigurable Technology and Systems.',
+        }
+    ]
+});
+
 const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
 const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
     'utf-8'));
@@ -215,6 +228,7 @@ const languageHtml = listTemplate(languages);
 const fundingHtml = datedTemplate(funding);
 const honoursHtml = datedTemplate(honours);
 const awardsHtml = datedTemplate(awards);
+const publicationsHtml = datedTemplate(publications);
 
 const html = baseTemplate({
     content: [
@@ -224,6 +238,7 @@ const html = baseTemplate({
         fundingHtml,
         honoursHtml,
         awardsHtml,
+        publicationsHtml,
         languageHtml
     ]
 });
