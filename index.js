@@ -14,28 +14,38 @@ const AFTER_FIRST_TEXT_MARGIN = em(1.1);
 const AFTER_FIRST_DATE_MARGIN = em(2);
 
 class ContentSection {
-    constructor(...content) {
+    constructor(type, ...content) {
         Object.assign(this, ...content, {
+            contentType: type,
             AFTER_FIRST_TEXT_MARGIN,
             AFTER_FIRST_DATE_MARGIN,
         });
     }
 }
 
-const contact = {
-    contentType: "Contact",
-    pairs      : {
+const contact = new ContentSection("Contact", {
+    pairs: {
         "Legal Name": "Sheng",
         Website     : "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
         Email       : "sh.zhong@mail.utoronto.ca",
         Github      : "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
     }
-};
+});
 
-const education = new ContentSection({
-    contentType: "Education",
-    topDist    : FIRST_TEXT_MARGIN,
-    rows       : [
+const languages = new ContentSection("Languages", {
+    pairs: {
+        ""        : "Experience [> lines of code]",
+        "C++"     : "50k",
+        Javascript: "10k",
+        Python    : "5k",
+        C         : "5k",
+        Java      : "2k",
+    }
+});
+
+const education = new ContentSection("Education", {
+    topDist: FIRST_TEXT_MARGIN,
+    rows   : [
         {
             duration  : "2013-09 to 2018-06",
             title     : "<strong>University of Toronto</strong>",
@@ -49,10 +59,9 @@ const education = new ContentSection({
     ]
 });
 
-const researchExperience = new ContentSection({
-    contentType: "Research Experience",
-    topDist    : FIRST_TEXT_MARGIN,
-    rows       : [
+const researchExperience = new ContentSection("Research Experience", {
+    topDist: FIRST_TEXT_MARGIN,
+    rows   : [
         {
             duration  : "2017-09 to 2018-05",
             title     : "<strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun",
@@ -93,6 +102,7 @@ const listTemplate = handlebars.compile(fs.readFileSync('templates/list_content.
 const researchHtml = datedTemplate(researchExperience);
 const educationHtml = datedTemplate(education);
 const contactHtml = listTemplate(contact);
+const languageHtml = listTemplate(languages);
 
-const html = baseTemplate({content: [contactHtml, educationHtml, researchHtml]});
+const html = baseTemplate({content: [contactHtml, educationHtml, researchHtml, languageHtml]});
 fs.writeFileSync('web/cv.html', html);
