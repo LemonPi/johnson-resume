@@ -305,6 +305,14 @@ const skills = new ContentSection("Software Skills", {
     }
 });
 
+const courses = new ContentSection("Courses", {
+    pairs: {
+        "Heavy focus" : "Control theory, Machine learning, Modelling",
+        "Medium focus": "Dynamics, Kinematics, Probability, Algorithms",
+        "Light focus" : "Economics, Marketing"
+    }
+});
+
 const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
 const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
     'utf-8'));
@@ -321,6 +329,7 @@ const publicationsHtml = datedTemplate(publications);
 const projectsHtml = datedTemplate(projects);
 const workHtml = datedTemplate(workExperience);
 const skillsHtml = listTemplate(skills);
+const coursesHtml = listTemplate(courses);
 
 let html;
 if (mode === CV) {
@@ -347,7 +356,8 @@ if (mode === CV) {
             projectsHtml,
             researchHtml,
             languageHtml,
-            skillsHtml
+            skillsHtml,
+            coursesHtml
         ]
     });
 }
