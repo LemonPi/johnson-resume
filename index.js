@@ -166,7 +166,13 @@ const workExperience = new ContentSection("Work Experience", {
 if (mode === CV) {
     researchExperience.rows = [activities.thesis, activities.verity, activities.fpga];
 } else {
-    researchExperience.rows = [activities.thesis, activities.fpga];
+    const verityResearch = Object.assign({}, activities.verity);
+    verityResearch.desc = "";
+    // remove mention of parameters
+    verityResearch.highlights.pop();
+    verityResearch.highlights.pop();
+
+    researchExperience.rows = [verityResearch, activities.fpga];
     // more work focus on resume
     activities.verity.desc +=
         " My largest project was designing and implementing a parameters framework" +
@@ -289,7 +295,15 @@ const projects = new ContentSection("Projects", {
     ]
 });
 
-// TODO add software skills list
+const skills = new ContentSection("Software Skills", {
+    pairs: {
+        Compilation      : "CMake, Makefile",
+        "Version control": "Git, SVN",
+        Environments     : "Windows, Linux, Arduino",
+        "Code review"    : "Gerrit",
+        Integration      : "Buildbot, Jenkins"
+    }
+});
 
 const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
 const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
@@ -306,6 +320,7 @@ const awardsHtml = datedTemplate(awards);
 const publicationsHtml = datedTemplate(publications);
 const projectsHtml = datedTemplate(projects);
 const workHtml = datedTemplate(workExperience);
+const skillsHtml = listTemplate(skills);
 
 let html;
 if (mode === CV) {
@@ -332,6 +347,7 @@ if (mode === CV) {
             projectsHtml,
             researchHtml,
             languageHtml,
+            skillsHtml
         ]
     });
 }
