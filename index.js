@@ -41,7 +41,7 @@ const contact = new ContentSection("Contact", {
     pairs: {
         "Legal Name": "Sheng",
         Website     : "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
-        Email       : "sh.zhong@mail.utoronto.ca",
+        Email       : "johnson9510@hotmail.com",
         Github      : "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
     }
 });
@@ -354,9 +354,9 @@ if (mode === CV) {
             educationHtml,
             workHtml,
             awardsHtml,
+            languageHtml,
             projectsHtml,
             researchHtml,
-            languageHtml,
             skillsHtml,
             coursesHtml
         ]
