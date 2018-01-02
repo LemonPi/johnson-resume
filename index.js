@@ -122,7 +122,37 @@ const activities = {
 
             "Benchmarked over realistic circuits, with speedups scaling with circuit size",
         ]
+    },
+    aer201: {
+        duration  : "2015-09 to 2015-11",
+        title     : "<strong>Autonomous Cooperating Robots</strong>",
+        caption   : "AER201 Design Project in a team of 3",
+        reference : {
+            link: "http://johnsonzhong.me/projects/robot/",
+            text: "johnsonzhong.me/projects/robot/",
+        },
+        desc      : "The task was to design and build a mobile robot to play connect-4 on " +
+                    "a semi-randomized game board. We decided to pursue a two robots approach, " +
+                    "one for retrieving the ball and one for playing the ball.",
+        highlights: [
+            "Targeted randomly placed high-reward ball dispensers to obtain " +
+            "<strong>fastest ball retrieval time</strong> (3 ball/min vs average 0.5 ball/min)",
+        ]
+    },
+    sal   : {
+        duration  : "2014-11 to 2015-09",
+        title     : "<strong>Simple Algorithms and Data Structures Library</strong>",
+        caption   : "Open source personal project",
+        reference : {
+            link: "http://johnsonzhong.me/sal/",
+            text: "johnsonzhong.me/sal/",
+        },
+        desc      : "Header only C++ template library with an interactive tester focused on implementation readability.",
+        highlights: [
+            "Implemented sets and maps with treaps to get <strong>4x insertion and 2x read</strong> time improvements over standard library",
+        ]
     }
+
 };
 
 const researchExperience = new ContentSection("Research Experience", {
@@ -255,35 +285,7 @@ const publications = new ContentSection("Publications", {
 const projects = new ContentSection("Projects", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
-        {
-            duration  : "2015-09 to 2015-11",
-            title     : "<strong>Autonomous Cooperating Robots</strong>",
-            caption   : "AER201 Design Project in a team of 3",
-            reference : {
-                link: "http://johnsonzhong.me/projects/robot/",
-                text: "johnsonzhong.me/projects/robot/",
-            },
-            desc      : "The task was to design and build a mobile robot to play connect-4 on " +
-                        "a semi-randomized game board. We decided to pursue a two robots approach, " +
-                        "one for retrieving the ball and one for playing the ball.",
-            highlights: [
-                "Targeted randomly placed high-reward ball dispensers to obtain " +
-                "<strong>fastest ball retrieval time</strong> (3 ball/min vs average 0.5 ball/min)",
-            ]
-        },
-        {
-            duration  : "2014-11 to 2015-09",
-            title     : "<strong>Simple Algorithms and Data Structures Library</strong>",
-            caption   : "AER201 Design Project in a team of 3",
-            reference : {
-                link: "http://johnsonzhong.me/sal/",
-                text: "johnsonzhong.me/sal/",
-            },
-            desc      : "Header only C++ template library with an interactive tester focused on implementation readability.",
-            highlights: [
-                "Implemented sets and maps with treaps to get <strong>4x insertion and 2x read</strong> time improvements over standard library",
-            ]
-        }
+        activities.aer201, activities.sal
     ]
 });
 
