@@ -1,6 +1,19 @@
 const handlebars = require('handlebars');
 const fs = require('fs');
 
+const CV = "cv";
+const RESUME = "resume";
+let mode;
+let badArgFormat = false;
+if (process.argv.length == 3) {
+    mode = process.argv[2].trim();
+} else {
+    badArgFormat = true;
+}
+if (badArgFormat || (mode !== CV && mode !== RESUME)) {
+    console.log(`supply mode as one of [${CV}, ${RESUME}]`);
+    process.exit(1);
+}
 
 function em(num) {
     if (String.prototype.endsWith.call(num, "em")) {
@@ -60,60 +73,83 @@ const education = new ContentSection("Education", {
     ]
 });
 
+const activities = {
+    thesis: {
+        duration  : "2017-09 to 2018-05",
+        title     : "<strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun",
+        caption   : "Undergraduate Thesis at the Advanced Micro and Nanosystems Laboratory",
+        desc      : "Project plan is to:",
+        highlights: [
+            "Create simulation of the magnetic system",
+            "Adapt controllers to a lower visual feedback frequency (30Hz to 4Hz)",
+            "Design a controller to simultaneously control multiple beads to enable twist manipulation",
+        ]
+    },
+    verity: {
+        duration  : "2016-05 to 2017-09",
+        title     : "<strong>Verity Studios R&D Engineering Intern</strong> with Prof. Raffaello D'Andrea",
+        caption   : "16 months Professional Experience Year, Zurich",
+        reference : {
+            link: "http://veritystudios.com",
+            text: "veritystudios.com"
+        },
+        desc      : "Verity Studios is an ETH spinoff specializing in indoor drone show systems.",
+        highlights: [
+            "Modelled localization system that gave position updates to drones",
+            "Estimated localization performance at any point inside any hypothetical flight space",
+            "Achieved <strong>0.86 correlation with 95% confidence of >0.8</strong> against real performance",
+            "Designed model for computational efficiency and suitability as a cost function",
+            "Designed and implemented cross-platform parameters framework",
+            "Parameters retained stored values intelligibly after firmware updates",
+        ]
+    },
+    fpga  : {
+        duration  : "2015-05 to 2015-09",
+        title     : "<strong>FPGA CAD Routing Optimization</strong> with Prof. Vaughn Betz",
+        caption   : "Summer research with USRA NSERC 5k grant, University of Toronto",
+        reference : {
+            link: "http://johnsonzhong.me/projects/vpr",
+            text: "johnsonzhong.me/projects/vpr",
+        },
+        desc      : "Verilog-to-Routing (VTR) is a CAD flow mapping Verilog to FPGAs. " +
+                    "Its runtime performance was bottlenecked by the routing phase for large circuits.",
+        highlights: [
+            "Developed route tree pruning algorithm to allow incremental reroutes, " +
+            "speeding up routing by up to <strong>3x</strong> on difficult benchmarks",
+
+            "Designed targeted rerouting algorithm for critical yet suboptimal connections, " +
+            "producing up to <strong>30% faster</strong> resulting circuits (maximum frequency)",
+
+            "Benchmarked over realistic circuits, with speedups scaling with circuit size",
+        ]
+    }
+};
+
 const researchExperience = new ContentSection("Research Experience", {
     topDist: FIRST_TEXT_MARGIN,
-    rows   : [
-        {
-            duration  : "2017-09 to 2018-05",
-            title     : "<strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun",
-            caption   : "Undergraduate Thesis at the Advanced Micro and Nanosystems Laboratory",
-            desc      : "Project plan is to:",
-            highlights: [
-                "Create simulation of the magnetic system",
-                "Adapt controllers to a lower visual feedback frequency (30Hz to 4Hz)",
-                "Design a controller to simultaneously control multiple beads to enable twist manipulation",
-            ]
-        },
-        {
-            duration  : "2016-05 to 2017-09",
-            title     : "<strong>Verity Studios R&D Engineering Intern</strong> with Prof. Raffaello D'Andrea",
-            caption   : "16 months Professional Experience Year, Zurich",
-            reference : {
-                link: "http://veritystudios.com",
-                text: "veritystudios.com"
-            },
-            desc      : "Verity Studios is an ETH spinoff specializing in indoor drone show systems",
-            highlights: [
-                "Modelled localization system that gave position updates to drones",
-                "Estimated localization performance at any point inside any hypothetical flight space",
-                "Achieved <strong>0.86 correlation with 95% confidence of >0.8</strong> against real performance",
-                "Designed model for computational efficiency and suitability as a cost function",
-                "Designed and implemented cross-platform parameters framework",
-                "Parameters retained stored values intelligibly after firmware updates",
-            ]
-        },
-        {
-            duration  : "2015-05 to 2015-09",
-            title     : "<strong>FPGA CAD Routing Optimization</strong> with Prof. Vaughn Betz",
-            caption   : "Summer research with USRA NSERC 5k grant, University of Toronto",
-            reference : {
-                link: "http://johnsonzhong.me/projects/vpr",
-                text: "johnsonzhong.me/projects/vpr",
-            },
-            desc      : "Verilog-to-Routing (VTR) is a CAD flow mapping Verilog to FPGAs. " +
-                        "Its runtime performance was bottlenecked by the routing phase for large circuits.",
-            highlights: [
-                "Developed route tree pruning algorithm to allow incremental reroutes, " +
-                "speeding up routing by up to <strong>3x</strong> on difficult benchmarks",
-
-                "Designed targeted rerouting algorithm for critical yet suboptimal connections, " +
-                "producing up to <strong>30% faster</strong> resulting circuits (maximum frequency)",
-
-                "Benchmarked over realistic circuits, with speedups scaling with circuit size",
-            ]
-        }
-    ]
 });
+
+const workExperience = new ContentSection("Work Experience", {
+    topDist: FIRST_TEXT_MARGIN,
+});
+
+if (mode === CV) {
+    researchExperience.rows = [activities.thesis, activities.verity, activities.fpga];
+} else {
+    researchExperience.rows = [activities.thesis, activities.fpga];
+    // more work focus on resume
+    activities.verity.desc +=
+        " My largest project was designing and implementing a parameters framework" +
+        "for multiple hardware platforms. Parameters differentiated behaviour" +
+        "for devices running the same firmware.";
+    activities.verity.highlights = [
+        "No code duplication between hardware platforms",
+        "No wasted space for parameters of other platforms",
+        "Parameters retained values intelligently through addition/removal of parameters",
+        "PC software can communicate parameters with all hardware platforms and versions without recompilation"
+    ];
+    workExperience.rows = [activities.verity];
+}
 
 const funding = new ContentSection("Funding Awarded", {
     topDist: FIRST_TEXT_MARGIN,
@@ -251,6 +287,8 @@ const projects = new ContentSection("Projects", {
     ]
 });
 
+// TODO add software skills list
+
 const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
 const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
     'utf-8'));
@@ -265,18 +303,34 @@ const honoursHtml = datedTemplate(honours);
 const awardsHtml = datedTemplate(awards);
 const publicationsHtml = datedTemplate(publications);
 const projectsHtml = datedTemplate(projects);
+const workHtml = datedTemplate(workExperience);
 
-const html = baseTemplate({
-    content: [
-        contactHtml,
-        educationHtml,
-        researchHtml,
-        fundingHtml,
-        honoursHtml,
-        awardsHtml,
-        publicationsHtml,
-        projectsHtml,
-        languageHtml
-    ]
-});
-fs.writeFileSync('web/cv.html', html);
+let html;
+if (mode === CV) {
+    html = baseTemplate({
+        content: [
+            contactHtml,
+            educationHtml,
+            researchHtml,
+            fundingHtml,
+            honoursHtml,
+            awardsHtml,
+            publicationsHtml,
+            projectsHtml,
+            languageHtml
+        ]
+    });
+} else {
+    html = baseTemplate({
+        content: [
+            contactHtml,
+            educationHtml,
+            workHtml,
+            awardsHtml,
+            projectsHtml,
+            researchHtml,
+            languageHtml,
+        ]
+    });
+}
+fs.writeFileSync(`web/${mode}.html`, html);
