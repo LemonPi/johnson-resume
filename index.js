@@ -300,6 +300,7 @@ const skills = new ContentSection("Software Skills", {
         Compilation      : "CMake, Makefile",
         "Version control": "Git, SVN",
         Environments     : "Windows, Linux, Arduino",
+        Libraries        : "Boost, QT",
         "Code review"    : "Gerrit",
         Integration      : "Buildbot, Jenkins"
     }
