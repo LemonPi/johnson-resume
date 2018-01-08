@@ -175,8 +175,8 @@ if (mode === CV) {
     researchExperience.rows = [verityResearch, activities.fpga];
     // more work focus on resume
     activities.verity.desc +=
-        " My largest project was designing and implementing a parameters framework" +
-        "for multiple hardware platforms. Parameters differentiated behaviour" +
+        " My largest project was designing and implementing a parameters framework " +
+        "for multiple hardware platforms. Parameters differentiated behaviour " +
         "for devices running the same firmware.";
     activities.verity.highlights = [
         "No code duplication between hardware platforms",
@@ -297,7 +297,7 @@ const projects = new ContentSection("Projects", {
 
 const skills = new ContentSection("Software Skills", {
     pairs: {
-        Compilation      : "CMake, Makefile",
+        "Build tools"      : "CMake, Makefile",
         "Version control": "Git, SVN",
         Environments     : "Windows, Linux, Arduino",
         Libraries        : "Boost, QT",
