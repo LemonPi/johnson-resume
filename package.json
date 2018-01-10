@@ -4,7 +4,8 @@
   "description": "my resume and cv",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node index.js cv && node index.js resume"
   },
   "repository": {
     "type": "git",

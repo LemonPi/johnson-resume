@@ -65,7 +65,7 @@ const education = new ContentSection("Education", {
             title     : "<strong>University of Toronto</strong>",
             highlights: [
                 "B.ASc in Engineering Science Robotics",
-                "Cumulative GPA: <i>3.91/4.0</i>",
+                "Cumulative GPA: <i>3.92/4.0</i>",
                 "Major GPA: <i>4.0/4.0</i>",
                 "<strong>Rank 2</strong>/161 in 3rd year",
             ]
@@ -297,7 +297,7 @@ const projects = new ContentSection("Projects", {
 
 const skills = new ContentSection("Software Skills", {
     pairs: {
-        "Build tools"      : "CMake, Makefile",
+        "Build tools"    : "CMake, Makefile",
         "Version control": "Git, SVN",
         Environments     : "Windows, Linux, Arduino",
         Libraries        : "Boost, QT",
