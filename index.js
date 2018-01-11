@@ -232,7 +232,6 @@ const awards = new ContentSection("Awards", {
         {
             duration : "2015-10",
             desc     : "<strong>1st</strong> in Canada in IEEEXtreme 9.0 (28/6800 globally)",
-            dollar   : 2000,
             reference: {
                 link: "http://johnsonzhong.me/res/ieee9.pdf",
                 text: "johnsonzhong.me/res/ieee9.pdf",
