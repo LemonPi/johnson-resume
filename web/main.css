@@ -349,7 +349,7 @@ div.content-text.skills-listing > p > {
     margin-left: 2.3em !important;
 }
 
-.dollars {
+.dollars, .quote {
     display: inline;
     color: grey;
     font-weight: bold;
@@ -362,6 +362,11 @@ div.content-text.skills-listing > p > {
 
 .dollars::after {
     content: ")";
+    color: green;
+}
+
+.quote::before, .quote::after {
+    content: '"';
     color: green;
 }
 
