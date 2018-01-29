@@ -53,7 +53,6 @@ const languages = new ContentSection("Languages", {
         Javascript: "10k",
         Python    : "5k",
         C         : "5k",
-        Java      : "2k",
     }
 });
 
@@ -95,9 +94,9 @@ const activities = {
         },
         desc      : "Verity Studios is an ETH spinoff specializing in indoor drone show systems.",
         highlights: [
-            "Modelled localization system that gave position updates to drones",
+            "Modelled indoors localization system using physics first principles",
             "Estimated localization performance at any point inside any hypothetical flight space",
-            "Achieved <strong>0.86 correlation with 95% confidence of >0.8</strong> against real performance",
+            "Validated model against real localization performance for <strong>0.86 correlation with 95% confidence of >0.8</strong>",
             "Designed model for computational efficiency and suitability as a cost function",
             "Designed and implemented cross-platform parameters framework",
             "Parameters retained stored values intelligibly after firmware updates",
@@ -175,14 +174,15 @@ if (mode === CV) {
     researchExperience.rows = [verityResearch, activities.fpga];
     // more work focus on resume
     activities.verity.desc +=
-        " My largest project was designing and implementing a parameters framework " +
+        " My largest project was designing and implementing a new parameters framework " +
         "for multiple hardware platforms. Parameters differentiated behaviour " +
         "for devices running the same firmware.";
     activities.verity.highlights = [
         "No code duplication between hardware platforms",
         "No wasted space for parameters of other platforms",
         "Parameters retained values intelligently through addition/removal of parameters",
-        "PC software can communicate parameters with all hardware platforms and versions without recompilation"
+        "PC software can communicate parameters with all hardware platforms and versions without recompilation",
+        "Simplified usage that a coworker wrote: <a class='quote'>Tears of joy come to my eyes seeing how much simpler the code becomes</a>"
     ];
     workExperience.rows = [activities.verity];
 }
@@ -221,8 +221,13 @@ const awards = new ContentSection("Awards", {
     afterFirstTextMargin: 0,
     rows                : [
         {
+            duration: "2018-01",
+            desc    : "3rd in Ontario Engineering Competition 2018 Programming category",
+            dollar  : 500,
+        },
+        {
             duration : "2016-03",
-            desc     : "<strong>1st</strong> in Ontario Engineering Competition Programming category",
+            desc     : "<strong>1st</strong> in Ontario Engineering 2016 Competition Programming category",
             dollar   : 2000,
             reference: {
                 link: "http://johnsonzhong.me/projects/snowfun/",
@@ -355,7 +360,6 @@ if (mode === CV) {
             awardsHtml,
             languageHtml,
             projectsHtml,
-            researchHtml,
             skillsHtml,
             coursesHtml
         ]
