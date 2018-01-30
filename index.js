@@ -182,7 +182,7 @@ if (mode === CV) {
         "No wasted space for parameters of other platforms",
         "Parameters retained values intelligently through addition/removal of parameters",
         "PC software can communicate parameters with all hardware platforms and versions without recompilation",
-        "Simplified usage that a coworker wrote: <a class='quote'>Tears of joy come to my eyes seeing how much simpler the code becomes</a>"
+        "Simplified usage so much that a coworker wrote: <a class='quote'>Tears of joy come to my eyes seeing how much simpler the code becomes</a>"
     ];
     workExperience.rows = [activities.verity];
 }
