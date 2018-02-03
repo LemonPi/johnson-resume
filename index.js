@@ -173,15 +173,12 @@ if (mode === CV) {
 
     researchExperience.rows = [verityResearch, activities.fpga];
     // more work focus on resume
-    activities.verity.desc +=
-        " My largest project was designing and implementing a new parameters framework " +
-        "for multiple hardware platforms. Parameters differentiated behaviour " +
-        "for devices running the same firmware.";
+    activities.verity.desc += " I designed and implemented a robust parameters system.";
     activities.verity.highlights = [
-        "No code duplication between hardware platforms",
-        "No wasted space for parameters of other platforms",
-        "Parameters retained values intelligently through addition/removal of parameters",
-        "PC software can communicate parameters with all hardware platforms and versions without recompilation",
+        "Works on PC and microcontroller hardware platforms with no code duplication",
+        "Real time performance",
+        "Parameters values smartly retained after adding/removing other parameters",
+        "PC software can modify parameters on all hardware platforms and versions without recompilation",
         "Simplified usage so much that a coworker wrote: <a class='quote'>Tears of joy come to my eyes seeing how much simpler the code becomes</a>"
     ];
     workExperience.rows = [activities.verity];
