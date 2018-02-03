@@ -37,14 +37,16 @@ class ContentSection {
     }
 }
 
-const contact = new ContentSection("Contact", {
-    pairs: {
-        "Legal Name": "Sheng",
-        Website     : "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
-        Email       : "johnson9510@hotmail.com",
-        Github      : "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
-    }
-});
+const contact = {
+    separator: "|",
+    classes  : "subtitle",
+    items    : [
+        "Legal name: Sheng",
+        "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
+        "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
+        "johnson9510@hotmail.com",
+    ]
+};
 
 const languages = new ContentSection("Languages", {
     pairs: {
@@ -315,14 +317,18 @@ const courses = new ContentSection("Courses", {
     }
 });
 
-const baseTemplate = handlebars.compile(fs.readFileSync('templates/base.html', 'utf-8'));
-const datedTemplate = handlebars.compile(fs.readFileSync('templates/dated_content.html',
-    'utf-8'));
-const listTemplate = handlebars.compile(fs.readFileSync('templates/list_content.html', 'utf-8'));
+function loadTemplate(path) {
+    return handlebars.compile(fs.readFileSync(path, 'utf-8'));
+}
 
+const baseTemplate = loadTemplate('templates/base.html');
+const datedTemplate = loadTemplate('templates/dated_content.html');
+const listTemplate = loadTemplate('templates/list_content.html');
+const inlineListTemplate = loadTemplate('templates/inline_list.html');
+
+const contactHtml = inlineListTemplate(contact);
 const researchHtml = datedTemplate(researchExperience);
 const educationHtml = datedTemplate(education);
-const contactHtml = listTemplate(contact);
 const languageHtml = listTemplate(languages);
 const fundingHtml = datedTemplate(funding);
 const honoursHtml = datedTemplate(honours);
@@ -336,8 +342,10 @@ const coursesHtml = listTemplate(courses);
 let html;
 if (mode === CV) {
     html = baseTemplate({
+        header : [
+            contactHtml
+        ],
         content: [
-            contactHtml,
             educationHtml,
             researchHtml,
             fundingHtml,
@@ -350,8 +358,10 @@ if (mode === CV) {
     });
 } else {
     html = baseTemplate({
+        header : [
+            contactHtml
+        ],
         content: [
-            contactHtml,
             educationHtml,
             workHtml,
             awardsHtml,

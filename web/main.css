@@ -392,3 +392,12 @@ div.content-text.skills-listing > p > {
 body {
     font-family: 'calibri' !important;
 }
+
+.inline-list {
+    padding-left: 0;
+}
+
+.inline-list > li {
+    list-style-type: none;
+    display: inline;
+}
