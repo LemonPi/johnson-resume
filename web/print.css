@@ -38,10 +38,6 @@
         margin-top: -1.6em;
     }
 
-    .content-wrapper > .content:first-child {
-        padding-top: 2em;
-    }
-
     .content:last-child {
         padding-bottom: 0;
     }
