@@ -50,11 +50,11 @@ const contact = {
 
 const languages = new ContentSection("Languages", {
     pairs: {
-        ""        : "Experience [> lines of code]",
-        "C++"     : "50k",
-        Javascript: "10k",
-        Python    : "5k",
-        C         : "5k",
+        ""        : "Experience [> thousands lines of code]",
+        "C++"     : "50",
+        Javascript: "10",
+        Python    : "5",
+        C         : "5",
     }
 });
 
@@ -96,12 +96,9 @@ const activities = {
         },
         desc      : "Verity Studios is an ETH spinoff specializing in indoor drone show systems.",
         highlights: [
-            "Modelled indoors localization system using physics first principles",
-            "Estimated localization performance at any point inside any hypothetical flight space",
-            "Validated model against real localization performance for <strong>0.86 correlation with 95% confidence of >0.8</strong>",
-            "Designed model for computational efficiency and suitability as a cost function",
-            "Designed and implemented cross-platform parameters framework",
-            "Parameters retained stored values intelligibly after firmware updates",
+            "Modelled novel indoors localization system using physics first principles",
+            "Enabled optimization of flight performance",
+            "Achieved <strong>correlation of 0.86</strong> (95% confidence >0.80) against experimental performance",
         ]
     },
     fpga  : {
@@ -169,18 +166,14 @@ if (mode === CV) {
 } else {
     const verityResearch = Object.assign({}, activities.verity);
     verityResearch.desc = "";
-    // remove mention of parameters
-    verityResearch.highlights.pop();
-    verityResearch.highlights.pop();
 
     researchExperience.rows = [verityResearch, activities.fpga];
     // more work focus on resume
     activities.verity.desc += " I designed and implemented a robust parameters system.";
     activities.verity.highlights = [
-        "Works on PC and microcontroller hardware platforms with no code duplication",
         "Real time performance",
-        "Parameters values smartly retained after adding/removing other parameters",
-        "PC software can modify parameters on all hardware platforms and versions without recompilation",
+        "Parameter values smartly retained after adding/removing other parameters",
+        "PC software can modify parameters on <strong>all hardware platforms and versions</strong> without recompilation",
         "Simplified usage so much that a coworker wrote: <a class='quote'>Tears of joy come to my eyes seeing how much simpler the code becomes</a>"
     ];
     workExperience.rows = [activities.verity];
@@ -364,6 +357,7 @@ if (mode === CV) {
         content: [
             educationHtml,
             workHtml,
+            researchHtml,
             awardsHtml,
             languageHtml,
             projectsHtml,
