@@ -84,9 +84,7 @@ header {
 
 header p {
     text-align: center;
-    font-family: "Calibri";
     font-variant: small-caps;
-    letter-spacing: 0.3em;
     margin: 0;
     color: #212121;
     font-size: 2em;
@@ -97,7 +95,6 @@ header p {
 }
 
 .subtitle {
-    font-family: "Calibri";
     padding-top: .3em;
     font-size: 0.55em;
     font-weight: 500;
@@ -160,7 +157,6 @@ body > div > article > div > section:last-child {
 }
 
 .content-cat {
-    font-family: "Calibri";
     font-variant: small-caps;
     font-weight: 300;
     letter-spacing: 1px;
@@ -390,7 +386,7 @@ div.content-text.skills-listing > p > {
 }
 
 body {
-    font-family: 'calibri' !important;
+    font-family: "Calibri", "Open Sans";
 }
 
 .inline-list {
