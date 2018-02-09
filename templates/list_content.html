@@ -3,7 +3,7 @@
         <div class="content-cat">
             {{contentType}}
         </div>
-        <div class="content-text">
+        <div class="content-text {{#if long}}long-list{{/if}}">
             {{#each pairs}}
             <ul>
                 <li>{{@key}}</li>

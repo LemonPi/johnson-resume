@@ -328,11 +328,11 @@ div.content-text.skills-listing > p > {
         width: 100%;
     }
 
-    .content-text ul li {
+    .long-list ul li {
         width: 100%;
     }
 
-    .content-text ul li:first-child {
+    .long-list ul li:first-child {
         width: 100%;
     }
 

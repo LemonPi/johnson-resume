@@ -32,6 +32,15 @@ class ContentSection {
             afterFirstTextMargin: AFTER_FIRST_TEXT_MARGIN,
         }, ...content);
 
+        // for lists, specify if it's a long list if any text is too long
+        if (this.hasOwnProperty("pairs")) {
+            Object.keys(this.pairs).forEach(key => {
+                if (key.length + this.pairs[key].length > 50) {
+                    this.long = true;
+                }
+            });
+        }
+
         // TODO replace 0.8 with font size
         this.afterFirstDateMargin = em(0.8 + parseFloat(this.afterFirstTextMargin));
     }
