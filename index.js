@@ -22,6 +22,29 @@ function em(num) {
     return num + "em";
 }
 
+
+// create templates
+function loadTemplate(path) {
+    return handlebars.compile(fs.readFileSync(path, 'utf-8'));
+}
+
+handlebars.registerHelper('ifObject', function (item, options) {
+    if (typeof item === "object") {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+});
+const baseTemplate = loadTemplate('templates/base.hbs');
+const datedTemplate = loadTemplate('templates/dated_content.hbs');
+const listTemplate = loadTemplate('templates/list_content.hbs');
+const inlineListTemplate = loadTemplate('templates/inline_list.hbs');
+
+// partials
+handlebars.registerPartial('highlight', loadTemplate('templates/highlight.hbs'));
+handlebars.registerPartial('content', loadTemplate('templates/content.hbs'));
+
+
 const FIRST_TEXT_MARGIN = em(2.2);
 const AFTER_FIRST_TEXT_MARGIN = em(1.1);
 
@@ -348,27 +371,6 @@ const courses = new ContentSection("Courses", {
     }
 });
 
-function loadTemplate(path) {
-    return handlebars.compile(fs.readFileSync(path, 'utf-8'));
-}
-
-handlebars.registerHelper('ifObject', function (item, options) {
-    if (typeof item === "object") {
-        return options.fn(this);
-    } else {
-        return options.inverse(this);
-    }
-});
-
-
-const baseTemplate = loadTemplate('templates/base.hbs');
-const datedTemplate = loadTemplate('templates/dated_content.hbs');
-const listTemplate = loadTemplate('templates/list_content.hbs');
-const inlineListTemplate = loadTemplate('templates/inline_list.hbs');
-
-// partials
-handlebars.registerPartial('highlight', loadTemplate('templates/highlight.hbs'));
-handlebars.registerPartial('content', loadTemplate('templates/content.hbs'));
 
 const contactHtml = inlineListTemplate(contact);
 const researchHtml = datedTemplate(researchExperience);
