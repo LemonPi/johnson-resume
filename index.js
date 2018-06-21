@@ -74,10 +74,15 @@ const education = new ContentSection("Education", {
             duration  : "2013-09 to 2018-06",
             title     : "<strong>University of Toronto</strong>",
             highlights: [
-                "B.ASc in Engineering Science Robotics",
-                "Cumulative GPA: <i>3.92/4.0</i>",
-                "Major GPA: <i>4.0/4.0</i>",
-                "<strong>Rank 2</strong>/161 in 3rd year",
+                {
+                    desc     : "B.ASc in Engineering Science Robotics with high honours",
+                    reference: {
+                        link: "http://johnsonzhong.me/res/grad/degree.pdf",
+                        text: "johnsonzhong.me/res/grad/degree.pdf",
+                    },
+                },
+                "Cumulative GPA: <i>3.91/4.0</i>",
+                "<strong>Rank 2</strong>/161 in semester 5 | <strong>5</strong>/158 in semester 6",
             ]
         }
     ]
@@ -222,6 +227,14 @@ const awards = new ContentSection("Awards", {
     afterFirstTextMargin: 0,
     rows                : [
         {
+            duration : "2018-04",
+            desc     : "Engineering Science Award of Excellence",
+            reference: {
+                link: "http://johnsonzhong.me/res/grad/award_of_excellence.pdf",
+                text: "johnsonzhong.me/res/grad/award_of_excellence.pdf"
+            }
+        },
+        {
             duration: "2018-01",
             desc    : "3rd in Ontario Engineering Competition 2018 Programming category",
             dollar  : 500,
@@ -323,10 +336,23 @@ function loadTemplate(path) {
     return handlebars.compile(fs.readFileSync(path, 'utf-8'));
 }
 
-const baseTemplate = loadTemplate('templates/base.html');
-const datedTemplate = loadTemplate('templates/dated_content.html');
-const listTemplate = loadTemplate('templates/list_content.html');
-const inlineListTemplate = loadTemplate('templates/inline_list.html');
+handlebars.registerHelper('ifObject', function (item, options) {
+    if (typeof item === "object") {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+});
+
+
+const baseTemplate = loadTemplate('templates/base.hbs');
+const datedTemplate = loadTemplate('templates/dated_content.hbs');
+const listTemplate = loadTemplate('templates/list_content.hbs');
+const inlineListTemplate = loadTemplate('templates/inline_list.hbs');
+
+// partials
+handlebars.registerPartial('highlight', loadTemplate('templates/highlight.hbs'));
+handlebars.registerPartial('content', loadTemplate('templates/content.hbs'));
 
 const contactHtml = inlineListTemplate(contact);
 const researchHtml = datedTemplate(researchExperience);

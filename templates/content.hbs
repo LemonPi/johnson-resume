@@ -1,0 +1,15 @@
+{{#ifObject this}}
+    {{{desc}}}
+    {{#if dollar}}
+        <a class="dollars">{{dollar}}</a>
+    {{/if}}
+    {{#unless caption}}
+        {{#if reference}}
+            <a class="reference" href="{{reference.link}}">
+                {{reference.text}}
+            </a>
+        {{/if}}
+    {{/unless}}
+{{else}}
+    {{{this}}}
+{{/ifObject}}

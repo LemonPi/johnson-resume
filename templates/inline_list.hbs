@@ -1,0 +1,6 @@
+<ul class="inline-list {{classes}}">
+    {{#each items}}
+        {{#unless @first}}{{../separator}}{{/unless}}
+        <li>{{{this}}}</li>
+    {{/each}}
+</ul>
