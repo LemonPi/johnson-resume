@@ -330,6 +330,7 @@ const projects = new ContentSection("Projects", {
 
 const skills = new ContentSection("Software Skills", {
     pairs: {
+        Specialities     : "Asynchronous programming, Optimization",
         "Build tools"    : "CMake, Makefile",
         "Version control": "Git, SVN",
         Environments     : "Windows, Linux, Arduino",
