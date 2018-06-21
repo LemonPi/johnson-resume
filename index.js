@@ -62,7 +62,7 @@ const languages = new ContentSection("Languages", {
         ""        : "Experience [> thousands lines of code]",
         "C++"     : "50",
         Javascript: "10",
-        Python    : "5",
+        Python    : "10",
         C         : "5",
     }
 });
@@ -108,11 +108,11 @@ const activities = {
         duration  : "2017-09 to 2018-05",
         title     : "<strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun",
         caption   : "Undergraduate Thesis at the Advanced Micro and Nanosystems Laboratory",
-        desc      : "Project plan is to:",
+        desc      : "The lab develops a cutting edge magnetic tweezer to manipulate nano-sized beads",
         highlights: [
-            "Create simulation of the magnetic system",
-            "Adapt controllers to a lower visual feedback frequency (30Hz to 4Hz)",
-            "Design a controller to simultaneously control multiple beads to enable twist manipulation",
+            "Created simulation of the magnetic system",
+            "Explored how practical constraints impacted controllable region",
+            "Designed a learned gain scheduling controller to optimize controllable region",
         ]
     },
     verity: {
@@ -196,7 +196,7 @@ if (mode === CV) {
     const verityResearch = Object.assign({}, activities.verity);
     verityResearch.desc = "";
 
-    researchExperience.rows = [verityResearch, activities.fpga];
+    researchExperience.rows = [activities.thesis, verityResearch, activities.fpga];
     // more work focus on resume
     activities.verity.desc += " I designed and implemented a robust parameters system.";
     activities.verity.highlights = [
