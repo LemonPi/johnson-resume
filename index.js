@@ -89,6 +89,21 @@ const education = new ContentSection("Education", {
 });
 
 const activities = {
+    kepler: {
+        duration  : "2018-05 to 2018-08",
+        title     : "<strong>Kepler Communications Software Engineering Intern</strong>",
+        caption   : "Summer internship, Toronto",
+        reference : {
+            link: "http://www.keplercommunications.com/",
+            text: "keplercommunications.com"
+        },
+        desc      : "Kepler is a Toronto startup providing communication services with nanosatellites.",
+        highlights: [
+            "Developed ground-to-satellite communication backend",
+            "Designed backend to scale to hundreds of satellites with different communication stacks",
+            // TODO "Automated periodic communication tasks",
+        ]
+    },
     thesis: {
         duration  : "2017-09 to 2018-05",
         title     : "<strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun",
@@ -190,7 +205,7 @@ if (mode === CV) {
         "PC software can modify parameters on <strong>all hardware platforms and versions</strong> without recompilation",
         "Simplified usage so much that a coworker wrote: <a class='quote'>Tears of joy come to my eyes seeing how much simpler the code becomes</a>"
     ];
-    workExperience.rows = [activities.verity];
+    workExperience.rows = [activities.kepler, activities.verity];
 }
 
 const funding = new ContentSection("Funding Awarded", {
