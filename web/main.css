@@ -397,3 +397,16 @@ body {
     list-style-type: none;
     display: inline;
 }
+
+.numerator {
+    color: green;
+    font-weight: bold;
+}
+
+.denominator, .denominator::before {
+    color: #aaaaaa;
+}
+
+.denominator::before {
+    content: "/";
+}

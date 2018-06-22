@@ -22,6 +22,27 @@ function em(num) {
     return num + "em";
 }
 
+class Replacer {
+    constructor() {
+        this.patterns = []
+    }
+
+    register(regex, replacer) {
+        this.patterns.push({
+            // ensure global replace
+            regex: new RegExp(regex, 'g'),
+            replacer
+        });
+    }
+
+    modify(text) {
+        for (const {regex, replacer} of this.patterns) {
+            console.log(`replacing with ${regex}`);
+            text = text.replace(regex, replacer);
+        }
+        return text;
+    }
+}
 
 // create templates
 function loadTemplate(path) {
@@ -104,8 +125,8 @@ const education = new ContentSection("Education", {
                         text: "johnsonzhong.me/res/grad/degree.pdf",
                     },
                 },
-                "Cumulative GPA: <i>3.91/4.0</i>",
-                "<strong>Rank 2</strong>/161 in semester 5 | <strong>5</strong>/158 in semester 6",
+                "Cumulative GPA: 3.91/4.0",
+                "<strong>Rank</strong> 2/161 in semester 5 | 5/158 in semester 6",
             ]
         }
     ]
@@ -194,7 +215,7 @@ const activities = {
         title     : "<strong>Simple Algorithms and Data Structures Library</strong>",
         caption   : "Open source personal project",
         reference : {
-            link: "http://johnsonzhong.me/sal/",
+            link: "http:/johnsonzhong.me/sal/",
             text: "johnsonzhong.me/sal/",
         },
         desc      : "Header only C++ template library with an interactive tester focused on implementation readability.",
@@ -419,4 +440,13 @@ if (mode === CV) {
         ]
     });
 }
+
+rep = new Replacer();
+rep.register(/([\d.]+)\/([\d.]+)/, function (match, numerator, denominator) {
+    const replaced = `<a class="numerator">${numerator}</a><a class="denominator">${denominator}</a>`;
+    console.log(`${match} replaced with ${replaced}`);
+    return replaced;
+});
+html = rep.modify(html);
+
 fs.writeFileSync(`web/${mode}.html`, html);
