@@ -126,6 +126,7 @@ const education = new ContentSection("Education", {
                     },
                 },
                 "Cumulative GPA: 3.91/4.0",
+                "Major GPA: 4.0/4.0",
                 "<strong>Rank</strong> 2/161 in semester 5 | 5/158 in semester 6",
             ]
         }
