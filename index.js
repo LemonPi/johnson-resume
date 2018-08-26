@@ -144,9 +144,9 @@ const activities = {
         },
         tools     : ["python", "asyncio"],
         desc      : "Kepler is a Toronto startup providing communication services with low earth orbit " +
-                    "nanosatellites. Challenges from this situation include communication opportunities " +
-                    "being limited to when the satellite is above a ground station (a pass), and often faulty " +
-                    "communication links.",
+                    "satellites. Challenges from this situation include communication opportunities " +
+                    "being limited to when the satellite is above a ground station (a pass), and frequently " +
+                    "dropped packets.",
         highlights: [
             "Designed and developed mission control backend for commanding and communicating with satellites to replace 3rd party software",
             "Scaled communication to potentially tens of satellites simultaneously",
