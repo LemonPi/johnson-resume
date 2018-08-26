@@ -142,6 +142,7 @@ const activities = {
             link: "http://www.keplercommunications.com/",
             text: "keplercommunications.com"
         },
+        tools     : ["python", "asyncio"],
         desc      : "Kepler is a Toronto startup providing communication services with low earth orbit " +
                     "nanosatellites. Challenges from this situation include communication opportunities " +
                     "being limited to when the satellite is above a ground station (a pass), and often faulty " +
@@ -157,6 +158,7 @@ const activities = {
         duration  : "2017-09 to 2018-05",
         title     : "<strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun",
         caption   : "Undergraduate Thesis at the Advanced Micro and Nanosystems Laboratory",
+        tools     : ["MATLAB", "QT"],
         desc      : "The lab develops a cutting edge magnetic tweezer to manipulate nano-sized beads",
         highlights: [
             "Created simulation of the magnetic system",
@@ -172,6 +174,7 @@ const activities = {
             link: "http://veritystudios.com",
             text: "veritystudios.com"
         },
+        tools     : ["C++", "QT", "boost"],
         desc      : "Verity Studios is an ETH spinoff specializing in indoor drone show systems.",
         highlights: [
             "Modelled novel indoors localization system using physics first principles",
@@ -187,6 +190,7 @@ const activities = {
             link: "http://johnsonzhong.me/projects/vpr",
             text: "johnsonzhong.me/projects/vpr",
         },
+        tools     : ["C++"],
         desc      : "Verilog-to-Routing (VTR) is a CAD flow mapping Verilog to FPGAs. " +
                     "Its runtime performance was bottlenecked by the routing phase for large circuits.",
         highlights: [
@@ -207,6 +211,7 @@ const activities = {
             link: "http://johnsonzhong.me/projects/robot/",
             text: "johnsonzhong.me/projects/robot/",
         },
+        tools     : ["C++", "Arduino"],
         desc      : "The task was to design and build a mobile robot to play connect-4 on " +
                     "a semi-randomized game board. We decided to pursue a two robots approach, " +
                     "one for retrieving the ball and one for playing the ball.",
@@ -223,6 +228,7 @@ const activities = {
             link: "http:/johnsonzhong.me/sal/",
             text: "johnsonzhong.me/sal/",
         },
+        tools     : ["C++"],
         desc      : "Header only C++ template library with an interactive tester focused on implementation readability.",
         highlights: [
             "Implemented sets and maps with treaps to get <strong>4x insertion and 2x read</strong> time improvements over standard library",
