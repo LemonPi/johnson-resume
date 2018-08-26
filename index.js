@@ -115,6 +115,15 @@ const education = new ContentSection("Education", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
         {
+            duration  : "2018-09 to now",
+            title     : "<strong>University of Michigan</strong>",
+            highlights: [
+                {
+                    desc: "PhD in Robotics under Dmitry Berenson",
+                },
+            ]
+        },
+        {
             duration  : "2013-09 to 2018-06",
             title     : "<strong>University of Toronto</strong>",
             highlights: [
