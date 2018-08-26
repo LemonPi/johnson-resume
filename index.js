@@ -142,11 +142,15 @@ const activities = {
             link: "http://www.keplercommunications.com/",
             text: "keplercommunications.com"
         },
-        desc      : "Kepler is a Toronto startup providing communication services with nanosatellites.",
+        desc      : "Kepler is a Toronto startup providing communication services with low earth orbit " +
+                    "nanosatellites. Challenges from this situation include communication opportunities " +
+                    "being limited to when the satellite is above a ground station (a pass), and often faulty " +
+                    "communication links.",
         highlights: [
-            "Developed ground-to-satellite communication backend",
-            "Designed backend to scale to hundreds of satellites with different communication stacks",
-            // TODO "Automated periodic communication tasks",
+            "Designed and developed mission control backend for commanding and communicating with satellites to replace 3rd party software",
+            "Scaled communication to potentially tens of satellites simultaneously",
+            "Modularized architecture to allow for handling of any communication protocol without affecting interaction logic",
+            "Allowed for task scheduling and progress saving across passes"
         ]
     },
     thesis: {
