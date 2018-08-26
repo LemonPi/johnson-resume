@@ -410,3 +410,24 @@ body {
 .denominator::before {
     content: "/";
 }
+
+.tools {
+    display: inline;
+    color: coral;
+}
+
+.tools::before {
+    content: " ";
+}
+
+.tools::after {
+    content: ",";
+}
+
+.tools:first-child::before {
+    content: "[";
+}
+
+.tools:last-child::after {
+    content: "]";
+}

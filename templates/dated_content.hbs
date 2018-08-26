@@ -20,8 +20,14 @@
                                 {{reference.text}}
                             </a>
                         {{/if}}
+                        {{#if tools}}
+                            <span class="tools-span">
+                                {{#each tools}}<a class="tools">{{{this}}}</a>{{/each}}
+                            </span>
+                        {{/if}}
                     </p>
                 {{/if}}
+
 
                 <p>
                     {{> content}}
