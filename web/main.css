@@ -413,21 +413,9 @@ body {
 
 .tools {
     display: inline;
-    color: coral;
-}
-
-.tools::before {
-    content: " ";
-}
-
-.tools::after {
-    content: ",";
-}
-
-.tools:first-child::before {
-    content: "[";
-}
-
-.tools:last-child::after {
-    content: "]";
+    color: white;
+    background-color: #aaa;
+    border-radius: 1em;
+    margin: 0 0.2em;
+    padding: 0 0.5em;
 }
