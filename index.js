@@ -121,6 +121,7 @@ const education = new ContentSection("Education", {
                 {
                     desc: "PhD in Robotics under Dmitry Berenson",
                 },
+                "Cumulative GPA: 4.0/4.0",
             ]
         },
         {
