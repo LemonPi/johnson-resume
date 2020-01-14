@@ -5,7 +5,7 @@ const CV = "cv";
 const RESUME = "resume";
 let mode;
 let badArgFormat = false;
-if (process.argv.length == 3) {
+if (process.argv.length === 3) {
     mode = process.argv[2].trim();
 } else {
     badArgFormat = true;
