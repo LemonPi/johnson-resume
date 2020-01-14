@@ -103,10 +103,10 @@ const contact = {
 
 const languages = new ContentSection("Languages", {
     pairs: {
-        ""        : "Experience [> thousands lines of code]",
+        ""        : "Experience [> thousands of lines of code]",
         "C++"     : "50",
-        Javascript: "10",
-        Python    : "10",
+        Python    : "30",
+        Javascript: "15",
         C         : "5",
     }
 });
@@ -152,7 +152,7 @@ const activities = {
             link: "http://www.keplercommunications.com/",
             text: "keplercommunications.com"
         },
-        tools     : ["python", "asyncio"],
+        tools     : ["python", "asyncio", "SQL"],
         desc      : "Kepler is a Toronto startup providing communication services with low earth orbit " +
                     "satellites. Challenges from this situation include communication opportunities " +
                     "being limited to when the satellite is above a ground station (a pass), and frequently " +
@@ -395,20 +395,21 @@ const projects = new ContentSection("Projects", {
 
 const skills = new ContentSection("Software Skills", {
     pairs: {
-        Specialities     : "Asynchronous programming, Optimization",
+        Specialities     : "Asynchronous programming, Embedded",
         "Build tools"    : "CMake, Makefile",
         "Version control": "Git, SVN",
-        Environments     : "Windows, Linux, Arduino",
-        Libraries        : "Boost, QT",
+        Environments     : "Web, Windows, Linux, Arduino",
+        Libraries        : "PyTorch, numpy, cvxpy, Boost, QT, D3",
         "Code review"    : "Gerrit",
-        Integration      : "Buildbot, Jenkins"
+        Integration      : "Buildbot, Jenkins",
+        Database         : "PostgreSQL, MySQL"
     }
 });
 
 const courses = new ContentSection("Courses", {
     pairs: {
-        "Heavy focus" : "Control theory, Machine learning, Modelling",
-        "Medium focus": "Dynamics, Kinematics, Probability, Algorithms",
+        "Heavy focus" : "Control, Machine learning, Modelling, MPC",
+        "Medium focus": "Perception, Kinematics, Probability, Algorithms",
         "Light focus" : "Economics, Marketing"
     }
 });
