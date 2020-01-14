@@ -419,3 +419,7 @@ body {
     margin: 0 0.2em;
     padding: 0 0.5em;
 }
+
+.tools:hover {
+    color: gold;
+}
