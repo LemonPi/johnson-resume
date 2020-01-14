@@ -254,7 +254,7 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
 }
 
 .highlight::before {
-    content: "♦";
+    content: "•";
     display: inline-block;
     width: 0px;
     margin-left: -10px;
