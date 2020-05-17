@@ -119,7 +119,7 @@ const education = new ContentSection("Education", {
             title     : "<strong>University of Michigan</strong>",
             highlights: [
                 {
-                    desc: "PhD in Robotics under Dmitry Berenson",
+                    desc: "PhD Candidate in Robotics under Dmitry Berenson",
                 },
                 "Cumulative GPA: 4.0/4.0",
             ]
@@ -378,10 +378,7 @@ const publications = new ContentSection("Publications", {
     rows   : [
         {
             duration: "2018-01",
-            desc    : 'Kevin Murray, Oleg Petelin, Jason Luu, Sheng Zhong, ' +
-                      'Jia Min Wang, Eugene Sha, Ken Kent, Vaughn Betz. ' +
-                      '"VTR 8.0: Highly Customizable FPGA Architecture Evaluation and CAD." ' +
-                      'To be submitted to ACM Transactions on Reconfigurable Technology and Systems.',
+            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High performance cad and customizable fpga architecture modelling,” ACM Transactions on Reconfigurable Technology and Systems (TRETS), 2019.',
         }
     ]
 });
