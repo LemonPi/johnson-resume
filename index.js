@@ -444,10 +444,10 @@ if (mode === CV) {
         content: [
             educationHtml,
             publicationsHtml,
-            researchHtml,
             fundingHtml,
             honoursHtml,
             awardsHtml,
+            researchHtml,
             projectsHtml,
             languageHtml
         ]
