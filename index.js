@@ -290,6 +290,11 @@ const honours = new ContentSection("Academic Honours", {
     afterFirstTextMargin: 0,
     rows                : [
         {
+            duration: "2018-09 to 2019-09",
+            desc    : "Rackham First-year Graduate Fellowship",
+            dollar  : 30600
+        },
+        {
             duration: "2013-09 to 2018-05",
             desc    : "Shaw Admission Scholarship",
             dollar  : 20000
