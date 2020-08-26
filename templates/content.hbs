@@ -10,5 +10,10 @@
             </a>
         {{/if}}
     {{/unless}}
+    {{#if status}}
+        <span class="status">
+            {{status}}
+        </span>
+    {{/if}}
 {{else}}{{{this}}}
 {{/ifObject}}

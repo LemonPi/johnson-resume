@@ -423,3 +423,16 @@ body {
 .tools:hover {
     color: gold;
 }
+
+.status {
+    display: inline;
+    color: grey;
+}
+
+.status::before {
+    content: "[";
+}
+
+.status::after {
+    content: "]";
+}
