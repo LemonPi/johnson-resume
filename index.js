@@ -97,7 +97,7 @@ const contact = {
         "Legal name: Sheng",
         "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
         "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
-        "johnson9510@hotmail.com",
+        "zhsh@umich.edu",
     ]
 };
 
