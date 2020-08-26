@@ -247,7 +247,7 @@ const activities = {
 
 };
 
-const researchExperience = new ContentSection("Research Experience", {
+const researchExperience = new ContentSection("Research Projects", {
     topDist: FIRST_TEXT_MARGIN,
 });
 
@@ -438,11 +438,11 @@ if (mode === CV) {
         ],
         content: [
             educationHtml,
+            publicationsHtml,
             researchHtml,
             fundingHtml,
             honoursHtml,
             awardsHtml,
-            publicationsHtml,
             projectsHtml,
             languageHtml
         ]
