@@ -105,7 +105,7 @@ const languages = new ContentSection("Languages", {
     pairs: {
         ""        : "Experience [> thousands of lines of code]",
         "C++"     : "50",
-        Python    : "30",
+        Python    : "50",
         Javascript: "15",
         C         : "5",
     }
