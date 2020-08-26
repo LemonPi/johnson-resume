@@ -377,6 +377,11 @@ const publications = new ContentSection("Publications", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
         {
+            duration: "2020-07",
+            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” Conference on Robot Learning (CoRL), 2020.',
+            status  : "submitted",
+        },
+        {
             duration: "2018-01",
             desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High performance cad and customizable fpga architecture modelling,” ACM Transactions on Reconfigurable Technology and Systems (TRETS), 2019.',
         }
