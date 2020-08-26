@@ -273,22 +273,10 @@ if (mode === CV) {
     workExperience.rows = [activities.kepler, activities.verity];
 }
 
-const funding = new ContentSection("Funding Awarded", {
+const funding = new ContentSection("Academic Funding", {
     topDist: FIRST_TEXT_MARGIN,
-    rows   : [
-        {
-            duration: "2015-05",
-            desc    : "Undergraduate Student Research Awards (USRA) " +
-                      "grant from Natural Sciences and Engineering Research Council of Canada (NSERC)",
-            dollar  : 6000
-        }
-    ]
-});
-
-const honours = new ContentSection("Academic Honours", {
-    topDist             : FIRST_TEXT_MARGIN,
     afterFirstTextMargin: 0,
-    rows                : [
+    rows   : [
         {
             duration: "2018-09 to 2019-09",
             desc    : "Rackham First-year Graduate Fellowship",
@@ -298,6 +286,12 @@ const honours = new ContentSection("Academic Honours", {
             duration: "2013-09 to 2018-05",
             desc    : "Shaw Admission Scholarship",
             dollar  : 20000
+        },
+        {
+            duration: "2015-05",
+            desc    : "Undergraduate Student Research Awards (USRA) " +
+                      "grant from Natural Sciences and Engineering Research Council of Canada (NSERC)",
+            dollar  : 6000
         },
         {
             duration: "2013-09",
@@ -427,7 +421,6 @@ const researchHtml = datedTemplate(researchExperience);
 const educationHtml = datedTemplate(education);
 const languageHtml = listTemplate(languages);
 const fundingHtml = datedTemplate(funding);
-const honoursHtml = datedTemplate(honours);
 const awardsHtml = datedTemplate(awards);
 const publicationsHtml = datedTemplate(publications);
 const projectsHtml = datedTemplate(projects);
@@ -445,11 +438,9 @@ if (mode === CV) {
             educationHtml,
             publicationsHtml,
             fundingHtml,
-            honoursHtml,
             awardsHtml,
             researchHtml,
             projectsHtml,
-            languageHtml
         ]
     });
 } else {
