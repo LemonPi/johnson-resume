@@ -280,7 +280,7 @@ const funding = new ContentSection("Academic Funding", {
         {
             duration: "2018-09 to 2019-09",
             desc    : "Rackham First-year Graduate Fellowship",
-            dollar  : 30600
+            dollar  : 75000
         },
         {
             duration: "2013-09 to 2018-05",
