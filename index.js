@@ -279,7 +279,7 @@ const funding = new ContentSection("Academic Funding", {
     rows   : [
         {
             duration: "2018-09 to 2019-09",
-            desc    : "Rackham First-year Graduate Fellowship",
+            desc    : "Robotics Institute Fellowship",
             dollar  : 75000
         },
         {
@@ -376,13 +376,16 @@ const publications = new ContentSection("Publications", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
         {
-            duration: "2020-07",
-            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” <em>Conference on Robot Learning (CoRL)</em>, 2020.',
-            status  : "submitted",
+            duration: "2021-02",
+            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” <em>RA-L</em>, 2021.',
+            reference: {
+                link: "http://johnsonzhong.me/projects/tampc",
+                text: "link",
+            },
         },
         {
             duration: "2018-01",
-            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High performance cad and customizable fpga architecture modelling,” <em>ACM Transactions on Reconfigurable Technology and Systems (TRETS)</em>, 2019.',
+            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High performance cad and customizable fpga architecture modelling,” <em>TRETS</em>, 2019.',
         }
     ]
 });
