@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/LemonPi/johnson-resume#readme",
   "dependencies": {
-    "handlebars": "^4.7.2"
+    "handlebars": "^4.7.7"
   }
 }
