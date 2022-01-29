@@ -407,11 +407,12 @@ const projects = new ContentSection("Projects", {
 
 const skills = new ContentSection("Software Skills", {
     pairs: {
-        Specialities     : "Asynchronous programming, Embedded",
-        "Build tools"    : "CMake, Makefile",
+        Specialities     : "Asynchronous programming, Parallelization",
+        "Build tools"    : "CMake, Makefile, Catkin",
         "Version control": "Git, SVN",
-        Environments     : "Web, Windows, Linux, Arduino",
+        Environments     : "ROS, Linux, Web, Arduino",
         Libraries        : "PyTorch, numpy, cvxpy, Boost, QT, D3",
+        Simulators       : "PyBullet, MuJoCo",
         "Code review"    : "Gerrit",
         Integration      : "Buildbot, Jenkins",
         Database         : "PostgreSQL, MySQL"
@@ -452,6 +453,8 @@ if (mode === CV) {
             awardsHtml,
             researchHtml,
             projectsHtml,
+            languageHtml,
+            skillsHtml,
         ]
     });
 } else {
