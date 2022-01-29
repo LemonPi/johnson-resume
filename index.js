@@ -376,8 +376,16 @@ const publications = new ContentSection("Publications", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
         {
+            duration: "2022-01",
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” <em>RA-L</em>, 2021.',
+            reference: {
+                link: "http://johnsonzhong.me/projects/stucco",
+                text: "link",
+            },
+        },
+        {
             duration: "2021-02",
-            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” <em>RA-L</em>, 2021.',
+            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” <em>RA-L</em>, 2020.',
             reference: {
                 link: "http://johnsonzhong.me/projects/tampc",
                 text: "link",
