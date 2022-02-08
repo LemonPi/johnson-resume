@@ -97,6 +97,7 @@ const contact = {
         "Legal name: Sheng",
         "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
         "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
+        "<a href=\"https://scholar.google.com/citations?user=ttUbb1wAAAAJ&hl=en&authuser=1\">Google Scholar</a>",
         "zhsh@umich.edu",
     ]
 };
@@ -377,7 +378,7 @@ const publications = new ContentSection("Publications", {
     rows   : [
         {
             duration: "2022-01",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” <em>RA-L</em>, 2021.',
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” <em>RA-L</em>, 2022.',
             reference: {
                 link: "http://johnsonzhong.me/projects/stucco",
                 text: "link",
@@ -385,7 +386,7 @@ const publications = new ContentSection("Publications", {
         },
         {
             duration: "2021-02",
-            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” <em>RA-L</em>, 2020.',
+            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” <em>RA-L</em>, 2021.',
             reference: {
                 link: "http://johnsonzhong.me/projects/tampc",
                 text: "link",
