@@ -145,6 +145,38 @@ const education = new ContentSection("Education", {
 });
 
 const activities = {
+    pytorch_kinematics: {
+        duration  : "2021-01 to 2022-06",
+        title     : "<strong>PyTorch Differentiable Robot Kinematics</strong>",
+        caption   : "Open source library",
+        reference : {
+            link: "https://github.com/UM-ARM-Lab/pytorch_kinematics",
+            text: "github.com/UM-ARM-Lab/pytorch_kinematics"
+        },
+        tools     : ["python", "PyTorch"],
+        desc      : "Parallel and differentiable robot forward kinematics and Jacobian calculation",
+        highlights: [
+            ">80 stars",
+            "Differentiable forward kinematics",
+            "Load robot description from URDF, SDF, and MJCF formats",
+        ]
+    },
+    mppi: {
+        duration  : "2020-01 to 2022-03",
+        title     : "<strong>PyTorch Model Predictive Path Integral Controller</strong>",
+        caption   : "Open source library",
+        reference : {
+            link: "https://github.com/UM-ARM-Lab/pytorch_mppi",
+            text: "github.com/UM-ARM-Lab/pytorch_mppi"
+        },
+        tools     : ["python", "PyTorch"],
+        desc      : "Batched and GPU friendly implementation of Model Predictive Path Integral (MPPI) controller.",
+        highlights: [
+            ">100 stars",
+            "Used by many university labs",
+            "Handle stochastic dynamic models",
+        ]
+    },
     kepler: {
         duration  : "2018-05 to 2018-08",
         title     : "<strong>Kepler Communications Software Engineering Intern</strong>",
@@ -406,7 +438,7 @@ const publications = new ContentSection("Publications", {
 const projects = new ContentSection("Projects", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
-        activities.aer201, activities.sal
+        activities.pytorch_kinematics, activities.mppi, activities.aer201, activities.sal
     ]
 });
 
