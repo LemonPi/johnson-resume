@@ -394,7 +394,11 @@ const publications = new ContentSection("Publications", {
         },
         {
             duration: "2018-01",
-            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High performance cad and customizable fpga architecture modelling,” <em>TRETS</em>, 2019.',
+            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High-performance CAD and Customizable FPGA Architecture Modelling,” <em>TRETS</em>, 2019. <strong>Best Paper Award.</strong>',
+            reference: {
+                link: "http://dl.acm.org/doi/10.1145/3388617",
+                text: "link",
+            },
         }
     ]
 });
@@ -477,7 +481,7 @@ if (mode === CV) {
 }
 
 rep = new Replacer();
-rep.register(/([\d.]+)\/([\d.]+)/, function (match, numerator, denominator) {
+rep.register(/(?<=[^./\d])([\d.]+)\/([\d.]+)/, function (match, numerator, denominator) {
     const replaced = `<a class="numerator">${numerator}</a><a class="denominator">${denominator}</a>`;
     console.log(`${match} replaced with ${replaced}`);
     return replaced;
