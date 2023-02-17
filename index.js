@@ -105,8 +105,8 @@ const contact = {
 const languages = new ContentSection("Languages", {
     pairs: {
         ""        : "Experience [> thousands of lines of code]",
-        "C++"     : "50",
-        Python    : "50",
+        Python    : "100",
+        "C++"     : "60",
         Javascript: "15",
         C         : "5",
     }
@@ -156,8 +156,8 @@ const activities = {
         tools     : ["python", "PyTorch"],
         desc      : "Parallel and differentiable robot forward kinematics and Jacobian calculation",
         highlights: [
-            ">80 stars",
-            "Differentiable forward kinematics",
+            ">100 stars",
+            "Differentiable robot kinematics and Jacobian computation",
             "Load robot description from URDF, SDF, and MJCF formats",
         ]
     },
@@ -172,7 +172,7 @@ const activities = {
         tools     : ["python", "PyTorch"],
         desc      : "Batched and GPU friendly implementation of Model Predictive Path Integral (MPPI) controller.",
         highlights: [
-            ">100 stars",
+            ">150 stars",
             "Used by many university labs",
             "Handle stochastic dynamic models",
         ]
@@ -405,7 +405,21 @@ const awards = new ContentSection("Awards", {
     ]
 });
 
-const publications = new ContentSection("Publications", {
+const conference = new ContentSection("Conference Publications", {
+    topDist: FIRST_TEXT_MARGIN,
+    rows   : [
+        {
+            duration: "2023-02",
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023. (submitted)',
+            // reference: {
+            //     link: "http://johnsonzhong.me/projects/chsel",
+            //     text: "link",
+            // },
+        },
+    ]
+});
+
+const publications = new ContentSection("Journal Publications", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
         {
@@ -432,6 +446,25 @@ const publications = new ContentSection("Publications", {
                 text: "link",
             },
         }
+    ]
+});
+
+const teaching = new ContentSection("Teaching Experience", {
+    topDist: FIRST_TEXT_MARGIN,
+    rows   : [
+        {
+            duration: "2022-07 to 2023-01",
+            desc    : 'Graduate Student Instructor for ROB 502 Programming for Robotics (new course)',
+            reference: {
+                link: "https://web.eecs.umich.edu/~dmitryb/courses/fall2022pfr/index.html",
+                text: "link",
+            },
+            highlights: [
+                "Designed assignments, labs, and quizzes ",
+                "Set up automated grading for assignments and quizzes ",
+                "Led weekly 2 hour interactive labs ",
+            ]
+        },
     ]
 });
 
@@ -472,10 +505,12 @@ const languageHtml = listTemplate(languages);
 const fundingHtml = datedTemplate(funding);
 const awardsHtml = datedTemplate(awards);
 const publicationsHtml = datedTemplate(publications);
+const conferenceHtml = datedTemplate(conference);
 const projectsHtml = datedTemplate(projects);
 const workHtml = datedTemplate(workExperience);
 const skillsHtml = listTemplate(skills);
 const coursesHtml = listTemplate(courses);
+const teachingHtml = datedTemplate(teaching);
 
 let html;
 if (mode === CV) {
@@ -486,9 +521,11 @@ if (mode === CV) {
         content: [
             educationHtml,
             publicationsHtml,
+            // conferenceHtml,
             fundingHtml,
             awardsHtml,
             researchHtml,
+            teachingHtml,
             projectsHtml,
             languageHtml,
             skillsHtml,
