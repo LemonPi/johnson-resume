@@ -423,6 +423,14 @@ const publications = new ContentSection("Journal Publications", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
         {
+            duration: "2023-02",
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023.',
+            reference: {
+                link: "http://johnsonzhong.me/projects/chsel",
+                text: "link",
+            },
+        },
+        {
             duration: "2022-01",
             desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” <em>RA-L</em>, 2022.',
             reference: {
