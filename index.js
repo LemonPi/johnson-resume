@@ -94,7 +94,6 @@ const contact = {
     separator: "|",
     classes  : "subtitle",
     items    : [
-        "Legal name: Sheng",
         "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
         "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
         "<a href=\"https://scholar.google.com/citations?user=ttUbb1wAAAAJ&hl=en&authuser=1\">Google Scholar</a>",
@@ -156,7 +155,7 @@ const activities = {
         tools     : ["python", "PyTorch"],
         desc      : "Parallel and differentiable robot forward kinematics and Jacobian calculation",
         highlights: [
-            ">100 stars",
+            ">150 stars",
             "Differentiable robot kinematics and Jacobian computation",
             "Load robot description from URDF, SDF, and MJCF formats",
         ]
@@ -172,7 +171,7 @@ const activities = {
         tools     : ["python", "PyTorch"],
         desc      : "Batched and GPU friendly implementation of Model Predictive Path Integral (MPPI) controller.",
         highlights: [
-            ">150 stars",
+            ">200 stars",
             "Used by many university labs",
             "Handle stochastic dynamic models",
         ]
@@ -410,11 +409,11 @@ const conference = new ContentSection("Conference Publications", {
     rows   : [
         {
             duration: "2023-02",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023. (submitted)',
-            // reference: {
-            //     link: "http://johnsonzhong.me/projects/chsel",
-            //     text: "link",
-            // },
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023.',
+            reference: {
+                link: "http://johnsonzhong.me/projects/chsel",
+                text: "link",
+            },
         },
     ]
 });
@@ -422,14 +421,14 @@ const conference = new ContentSection("Conference Publications", {
 const publications = new ContentSection("Journal Publications", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
-        {
-            duration: "2023-02",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023.',
-            reference: {
-                link: "http://johnsonzhong.me/projects/chsel",
-                text: "link",
-            },
-        },
+        // {
+        //     duration: "2023-02",
+        //     desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023.',
+        //     reference: {
+        //         link: "http://johnsonzhong.me/projects/chsel",
+        //         text: "link",
+        //     },
+        // },
         {
             duration: "2022-01",
             desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” <em>RA-L</em>, 2022.',
@@ -448,7 +447,7 @@ const publications = new ContentSection("Journal Publications", {
         },
         {
             duration: "2018-01",
-            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High-performance CAD and Customizable FPGA Architecture Modelling,” <em>TRETS</em>, 2019. <strong>Best Paper Award.</strong>',
+            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High-performance CAD and Customizable FPGA Architecture Modelling,” <em>TRETS</em>, 2020. <strong>Best Paper Award.</strong>',
             reference: {
                 link: "http://dl.acm.org/doi/10.1145/3388617",
                 text: "link",
@@ -529,7 +528,7 @@ if (mode === CV) {
         content: [
             educationHtml,
             publicationsHtml,
-            // conferenceHtml,
+            conferenceHtml,
             fundingHtml,
             awardsHtml,
             researchHtml,
