@@ -115,21 +115,22 @@ const education = new ContentSection("Education", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
         {
-            duration  : "2018-09 to now",
-            title     : "<strong>University of Michigan</strong>",
+            duration  : "2018-09 to 2024-09",
+            title     : "<strong>Ph.D.,</strong> University of Michigan",
             highlights: [
-                {
-                    desc: "PhD Candidate in Robotics under Dmitry Berenson",
-                },
-                "Cumulative GPA: 3.96/4.0",
+                "Robotics",
+                "Advisor: Dmitry Berenson, Co-advsor: Nima Fazeli",
+                "Dissertation: Contact-based Perception and Planning for Robotic Manipulation in Novel Environments",
+                "Committee: Dmitry Berenson, Nima Fazeli, Maani Ghaffari (Umich), Ken Goldberg (Berkeley)"
+                // "Cumulative GPA: 3.96/4.0",
             ]
         },
         {
             duration  : "2013-09 to 2018-06",
-            title     : "<strong>University of Toronto</strong>",
+            title     : "<strong>B.ASc.,</strong> University of Toronto",
             highlights: [
                 {
-                    desc     : "B.ASc in Engineering Science Robotics with high honours",
+                    desc     : "Engineering Science Robotics with high honours",
                     reference: {
                         link: "http://johnsonzhong.me/res/grad/degree.pdf",
                         text: "johnsonzhong.me/res/grad/degree.pdf",
@@ -145,7 +146,7 @@ const education = new ContentSection("Education", {
 
 const activities = {
     pytorch_kinematics: {
-        duration  : "2021-01 to 2022-06",
+        duration  : "2021-01",
         title     : "<strong>PyTorch Differentiable Robot Kinematics</strong>",
         caption   : "Open source library",
         reference : {
@@ -153,15 +154,15 @@ const activities = {
             text: "github.com/UM-ARM-Lab/pytorch_kinematics"
         },
         tools     : ["python", "PyTorch"],
-        desc      : "Parallel and differentiable robot forward kinematics and Jacobian calculation",
+        desc      : "Parallel and differentiable robot forward kinematics and Jacobian calculation.",
         highlights: [
-            ">150 stars",
+            ">380 stars",
             "Differentiable robot kinematics and Jacobian computation",
             "Load robot description from URDF, SDF, and MJCF formats",
         ]
     },
     mppi: {
-        duration  : "2020-01 to 2022-03",
+        duration  : "2020-01",
         title     : "<strong>PyTorch Model Predictive Path Integral Controller</strong>",
         caption   : "Open source library",
         reference : {
@@ -171,9 +172,8 @@ const activities = {
         tools     : ["python", "PyTorch"],
         desc      : "Batched and GPU friendly implementation of Model Predictive Path Integral (MPPI) controller.",
         highlights: [
-            ">200 stars",
-            "Used by many university labs",
-            "Handle stochastic dynamic models",
+            ">360 stars",
+            "Novel kernel interpolation smoothing",
         ]
     },
     kepler: {
@@ -245,38 +245,37 @@ const activities = {
             "Benchmarked over realistic circuits, with speedups scaling with circuit size",
         ]
     },
-    aer201: {
-        duration  : "2015-09 to 2015-11",
-        title     : "<strong>Autonomous Cooperating Robots</strong>",
-        caption   : "AER201 Design Project in a team of 3",
-        reference : {
-            link: "http://johnsonzhong.me/projects/robot/",
-            text: "johnsonzhong.me/projects/robot/",
-        },
-        tools     : ["C++", "Arduino"],
-        desc      : "The task was to design and build a mobile robot to play connect-4 on " +
-                    "a semi-randomized game board. We decided to pursue a two robots approach, " +
-                    "one for retrieving the ball and one for playing the ball.",
-        highlights: [
-            "Targeted randomly placed high-reward ball dispensers to obtain " +
-            "<strong>fastest ball retrieval time</strong> (3 ball/min vs average 0.5 ball/min)",
-        ]
-    },
-    sal   : {
-        duration  : "2014-11 to 2015-09",
-        title     : "<strong>Simple Algorithms and Data Structures Library</strong>",
-        caption   : "Open source personal project",
-        reference : {
-            link: "http:/johnsonzhong.me/sal/",
-            text: "johnsonzhong.me/sal/",
-        },
-        tools     : ["C++"],
-        desc      : "Header only C++ template library with an interactive tester focused on implementation readability.",
-        highlights: [
-            "Implemented sets and maps with treaps to get <strong>4x insertion and 2x read</strong> time improvements over standard library",
-        ]
-    }
-
+    // aer201: {
+    //     duration  : "2015-09 to 2015-11",
+    //     title     : "<strong>Autonomous Cooperating Robots</strong>",
+    //     caption   : "AER201 Design Project in a team of 3",
+    //     reference : {
+    //         link: "http://johnsonzhong.me/projects/robot/",
+    //         text: "johnsonzhong.me/projects/robot/",
+    //     },
+    //     tools     : ["C++", "Arduino"],
+    //     desc      : "The task was to design and build a mobile robot to play connect-4 on " +
+    //                 "a semi-randomized game board. We decided to pursue a two robots approach, " +
+    //                 "one for retrieving the ball and one for playing the ball.",
+    //     highlights: [
+    //         "Targeted randomly placed high-reward ball dispensers to obtain " +
+    //         "<strong>fastest ball retrieval time</strong> (3 ball/min vs average 0.5 ball/min)",
+    //     ]
+    // },
+    // sal   : {
+    //     duration  : "2014-11 to 2015-09",
+    //     title     : "<strong>Simple Algorithms and Data Structures Library</strong>",
+    //     caption   : "Open source personal project",
+    //     reference : {
+    //         link: "http:/johnsonzhong.me/sal/",
+    //         text: "johnsonzhong.me/sal/",
+    //     },
+    //     tools     : ["C++"],
+    //     desc      : "Header only C++ template library with an interactive tester focused on implementation readability.",
+    //     highlights: [
+    //         "Implemented sets and maps with treaps to get <strong>4x insertion and 2x read</strong> time improvements over standard library",
+    //     ]
+    // }
 };
 
 const researchExperience = new ContentSection("Research Projects", {
@@ -421,6 +420,14 @@ const conference = new ContentSection("Conference Publications", {
 const publications = new ContentSection("Journal Publications", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
+        {
+            duration: "2024-09",
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “RUMI: Rummaging with Mutual Information,” <em>T-RO</em>, 2024. (under review)',
+            // reference: {
+            //     link: "http://johnsonzhong.me/projects/stucco",
+            //     text: "link",
+            // },
+        },
         // {
         //     duration: "2023-02",
         //     desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023.',
@@ -478,7 +485,7 @@ const teaching = new ContentSection("Teaching Experience", {
 const projects = new ContentSection("Projects", {
     topDist: FIRST_TEXT_MARGIN,
     rows   : [
-        activities.pytorch_kinematics, activities.mppi, activities.aer201, activities.sal
+        activities.pytorch_kinematics, activities.mppi, // activities.aer201, activities.sal
     ]
 });
 
@@ -529,11 +536,11 @@ if (mode === CV) {
             educationHtml,
             publicationsHtml,
             conferenceHtml,
+            projectsHtml,
             fundingHtml,
             awardsHtml,
             researchHtml,
             teachingHtml,
-            projectsHtml,
             languageHtml,
             skillsHtml,
         ]
@@ -545,11 +552,13 @@ if (mode === CV) {
         ],
         content: [
             educationHtml,
+            publicationsHtml,
+            conferenceHtml,
+            projectsHtml,
             workHtml,
             researchHtml,
             awardsHtml,
             languageHtml,
-            projectsHtml,
             skillsHtml,
             coursesHtml
         ]
