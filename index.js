@@ -408,7 +408,7 @@ const conference = new ContentSection("Conference Publications", {
     rows   : [
         {
             duration: "2023-02",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023.',
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” Robotics: Science and Systems (<em>RSS</em>), 2023.',
             reference: {
                 link: "http://johnsonzhong.me/projects/chsel",
                 text: "link",
@@ -422,7 +422,7 @@ const publications = new ContentSection("Journal Publications", {
     rows   : [
         {
             duration: "2024-09",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “RUMI: Rummaging with Mutual Information,” <em>T-RO</em>, 2024. (under review)',
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “RUMI: Rummaging with Mutual Information,” IEEE Transactions on Robotics (<em>T-RO</em>), 2024. (under review)',
             // reference: {
             //     link: "http://johnsonzhong.me/projects/stucco",
             //     text: "link",
@@ -438,7 +438,7 @@ const publications = new ContentSection("Journal Publications", {
         // },
         {
             duration: "2022-01",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” <em>RA-L</em>, 2022.',
+            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” IEEE Robotics and Automation Letters (<em>RA-L</em>), vol. 7, no. 2, pp. 3507-3514, April 2022.',
             reference: {
                 link: "http://johnsonzhong.me/projects/stucco",
                 text: "link",
@@ -446,7 +446,7 @@ const publications = new ContentSection("Journal Publications", {
         },
         {
             duration: "2021-02",
-            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” <em>RA-L</em>, 2021.',
+            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” IEEE Robotics and Automation Letters (<em>RA-L</em>), vol. 6, no. 2, pp. 1447-1454, April 2021.',
             reference: {
                 link: "http://johnsonzhong.me/projects/tampc",
                 text: "link",
@@ -454,7 +454,7 @@ const publications = new ContentSection("Journal Publications", {
         },
         {
             duration: "2018-01",
-            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang, M. Eldafrawy, J.-P. Legault, E. Sha,A. G. Graham, J. Wu, M. J. P. Walker et  al., “Vtr 8: High-performance CAD and Customizable FPGA Architecture Modelling,” <em>TRETS</em>, 2020. <strong>Best Paper Award.</strong>',
+            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang et  al., “Vtr 8: High-performance CAD and Customizable FPGA Architecture Modelling,” ACM Transactions on Reconfigurable Technology and Systems (<em>TRETS</em>), vol. 13, no. 2, pp. 1-55, 2020. <strong>Best Paper Award.</strong>',
             reference: {
                 link: "http://dl.acm.org/doi/10.1145/3388617",
                 text: "link",
