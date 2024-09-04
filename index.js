@@ -72,7 +72,7 @@ const AFTER_FIRST_TEXT_MARGIN = em(1.1);
 class ContentSection {
     constructor(type, ...content) {
         Object.assign(this, {
-            contentType         : type,
+            contentType: type,
             afterFirstTextMargin: AFTER_FIRST_TEXT_MARGIN,
         }, ...content);
 
@@ -92,8 +92,8 @@ class ContentSection {
 
 const contact = {
     separator: "|",
-    classes  : "subtitle",
-    items    : [
+    classes: "subtitle",
+    items: [
         "<a href=\"http://johnsonzhong.me\">johnsonzhong.me</a>",
         "<a href=\"https://github.com/lemonpi\">github.com/lemonpi</a>",
         "<a href=\"https://scholar.google.com/citations?user=ttUbb1wAAAAJ&hl=en&authuser=1\">Google Scholar</a>",
@@ -103,92 +103,110 @@ const contact = {
 
 const languages = new ContentSection("Languages", {
     pairs: {
-        ""        : "Experience [> thousands of lines of code]",
-        Python    : "100",
-        "C++"     : "60",
+        "": "Experience [> thousands of lines of code]",
+        Python: "100",
+        "C++": "60",
         Javascript: "15",
-        C         : "5",
+        C: "5",
     }
 });
 
 const education = new ContentSection("Education", {
     topDist: FIRST_TEXT_MARGIN,
-    rows   : [
+    rows: [
         {
-            duration  : "2018-09 to 2024-09",
-            title     : "<strong>Ph.D.,</strong> University of Michigan",
+            duration: "2018-09 to 2024-09",
+            title: "<strong>Ph.D. in Robotics,</strong> University of Michigan",
             highlights: [
-                "Robotics",
-                "Advisor: Dmitry Berenson, Co-advsor: Nima Fazeli",
+                "Advisor: Dmitry Berenson, Co-advisor: Nima Fazeli",
                 "Dissertation: Contact-based Perception and Planning for Robotic Manipulation in Novel Environments",
                 "Committee: Dmitry Berenson, Nima Fazeli, Maani Ghaffari (Umich), Ken Goldberg (Berkeley)"
                 // "Cumulative GPA: 3.96/4.0",
             ]
         },
         {
-            duration  : "2013-09 to 2018-06",
-            title     : "<strong>B.ASc.,</strong> University of Toronto",
+            duration: "2013-09 to 2018-06",
+            title: "<strong>B.ASc. in Engineering Science Robotics,</strong> University of Toronto",
             highlights: [
+                // {
+                //     desc     : "Engineering Science Robotics with high honors",
+                //     reference: {
+                //         link: "http://johnsonzhong.me/res/grad/degree.pdf",
+                //         text: "johnsonzhong.me/res/grad/degree.pdf",
+                //     },
+                // },
                 {
-                    desc     : "Engineering Science Robotics with high honours",
+                    desc: "GPA: 3.91/4.0, Major GPA: 4.0/4.0, Class standing 2/161 with high honors",
                     reference: {
                         link: "http://johnsonzhong.me/res/grad/degree.pdf",
                         text: "johnsonzhong.me/res/grad/degree.pdf",
                     },
-                },
-                "Cumulative GPA: 3.91/4.0",
-                "Major GPA: 4.0/4.0",
-                "<strong>Rank</strong> 2/161 in semester 5 | 5/158 in semester 6",
+                }
+                // "<strong>Rank</strong> 2/161 in semester 5 | 5/158 in semester 6",
             ]
         }
     ]
 });
 
 const activities = {
+    pytorch_volumetric: {
+        duration: "2022-06",
+        title: "<strong>PyTorch Volumetric Data Structures</strong>",
+        caption: "Github",
+        reference: {
+            link: "https://github.com/UM-ARM-Lab/pytorch_volumetric",
+            text: "github.com/UM-ARM-Lab/pytorch_volumetric"
+        },
+        tools: ["python", "PyTorch"],
+        desc: "Signed distance functions (SDF), voxel grids, and other volumetric data structures accelerated on the GPU.",
+        highlights: [
+            ">100 stars, >8 forks",
+            "Fast parallel query across points for SDF value and gradients",
+        ]
+    },
     pytorch_kinematics: {
-        duration  : "2021-01",
-        title     : "<strong>PyTorch Differentiable Robot Kinematics</strong>",
-        caption   : "Open source library",
-        reference : {
+        duration: "2021-01",
+        title: "<strong>PyTorch Differentiable Robot Kinematics</strong>",
+        caption: "Github",
+        reference: {
             link: "https://github.com/UM-ARM-Lab/pytorch_kinematics",
             text: "github.com/UM-ARM-Lab/pytorch_kinematics"
         },
-        tools     : ["python", "PyTorch"],
-        desc      : "Parallel and differentiable robot forward kinematics and Jacobian calculation.",
+        tools: ["python", "PyTorch"],
+        desc: "Parallel and differentiable robot forward kinematics and Jacobian calculation.",
         highlights: [
-            ">380 stars",
-            "Differentiable robot kinematics and Jacobian computation",
+            ">400 stars, >30 forks",
             "Load robot description from URDF, SDF, and MJCF formats",
         ]
     },
     mppi: {
-        duration  : "2020-01",
-        title     : "<strong>PyTorch Model Predictive Path Integral Controller</strong>",
-        caption   : "Open source library",
-        reference : {
+        duration: "2020-01",
+        title: "<strong>PyTorch Model Predictive Path Integral Controller</strong>",
+        caption: "Github",
+        reference: {
             link: "https://github.com/UM-ARM-Lab/pytorch_mppi",
             text: "github.com/UM-ARM-Lab/pytorch_mppi"
         },
-        tools     : ["python", "PyTorch"],
-        desc      : "Batched and GPU friendly implementation of Model Predictive Path Integral (MPPI) controller.",
+        tools: ["python", "PyTorch"],
+        desc: "Batched and GPU friendly implementation of Model Predictive Path Integral (MPPI) controller.",
         highlights: [
-            ">360 stars",
+            ">380 stars, >50 forks",
             "Novel kernel interpolation smoothing",
         ]
     },
     kepler: {
-        duration  : "2018-05 to 2018-08",
-        title     : "<strong>Kepler Communications Software Engineering Intern</strong>",
-        caption   : "Summer internship, Toronto",
-        reference : {
+        duration: "2018-05 to 2018-08",
+        title: "<strong>Kepler Communications Software Engineering Intern</strong>",
+        caption: "Summer internship, Toronto",
+        reference: {
             link: "http://www.keplercommunications.com/",
             text: "keplercommunications.com"
         },
-        tools     : ["python", "asyncio", "SQL"],
-        desc      : "Kepler is a Toronto startup providing communication services with low earth orbit " +
-                    "satellites. Challenges from this situation include communication opportunities " +
-                    "being limited to when the satellite is above a ground station (a pass), and frequently " +
-                    "dropped packets.",
+        tools: ["python", "asyncio", "SQL"],
+        desc: "Kepler is a Toronto startup providing communication services with low earth orbit " +
+            "satellites. Challenges from this situation include communication opportunities " +
+            "being limited to when the satellite is above a ground station (a pass), and frequently " +
+            "dropped packets.",
         highlights: [
             "Designed and developed mission control backend for commanding and communicating with satellites to replace 3rd party software",
             "Scaled communication to potentially tens of satellites simultaneously",
@@ -197,11 +215,11 @@ const activities = {
         ]
     },
     thesis: {
-        duration  : "2017-09 to 2018-05",
-        title     : "<strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun",
-        caption   : "Undergraduate Thesis at the Advanced Micro and Nanosystems Laboratory",
-        tools     : ["MATLAB", "QT"],
-        desc      : "The lab develops a cutting edge magnetic tweezer to manipulate nano-sized beads",
+        duration: "2017-09 to 2018-05",
+        title: "<strong>Magnetic Microbead Control for Intracellular Manipulation</strong> with Prof. Yu Sun",
+        caption: "Undergraduate Thesis at the Advanced Micro and Nanosystems Laboratory",
+        tools: ["MATLAB", "QT"],
+        desc: "The lab develops a cutting edge magnetic tweezer to manipulate nano-sized beads",
         highlights: [
             "Created simulation of the magnetic system",
             "Explored how practical constraints impacted controllable region",
@@ -209,32 +227,32 @@ const activities = {
         ]
     },
     verity: {
-        duration  : "2016-05 to 2017-09",
-        title     : "<strong>Verity Studios R&D Engineering Intern</strong> with Prof. Raffaello D'Andrea",
-        caption   : "16 months Professional Experience Year, Zurich",
-        reference : {
+        duration: "2016-05 to 2017-09",
+        title: "<strong>Verity Studios R&D Engineering Intern</strong> with Prof. Raffaello D'Andrea",
+        caption: "16 months Professional Experience Year, Zurich",
+        reference: {
             link: "http://veritystudios.com",
             text: "veritystudios.com"
         },
-        tools     : ["C++", "QT", "boost"],
-        desc      : "Verity Studios is an ETH spinoff specializing in indoor drone show systems.",
+        tools: ["C++", "QT", "boost"],
+        desc: "Verity Studios is an ETH spinoff specializing in indoor drone show systems.",
         highlights: [
             "Modelled novel indoors localization system using physics first principles",
             "Enabled optimization of flight performance",
             "Achieved <strong>correlation of 0.86</strong> (95% confidence >0.80) against experimental performance",
         ]
     },
-    fpga  : {
-        duration  : "2015-05 to 2015-09",
-        title     : "<strong>FPGA CAD Routing Optimization</strong> with Prof. Vaughn Betz",
-        caption   : "Summer research with USRA NSERC 5k grant, University of Toronto",
-        reference : {
+    fpga: {
+        duration: "2015-05 to 2015-09",
+        title: "<strong>FPGA CAD Routing Optimization</strong> with Prof. Vaughn Betz",
+        caption: "Summer research with USRA NSERC 5k grant, University of Toronto",
+        reference: {
             link: "http://johnsonzhong.me/projects/vpr",
             text: "johnsonzhong.me/projects/vpr",
         },
-        tools     : ["C++"],
-        desc      : "Verilog-to-Routing (VTR) is a CAD flow mapping Verilog to FPGAs. " +
-                    "Its runtime performance was bottlenecked by the routing phase for large circuits.",
+        tools: ["C++"],
+        desc: "Verilog-to-Routing (VTR) is a CAD flow mapping Verilog to FPGAs. " +
+            "Its runtime performance was bottlenecked by the routing phase for large circuits.",
         highlights: [
             "Developed route tree pruning algorithm to allow incremental reroutes, " +
             "speeding up routing by up to <strong>3x</strong> on difficult benchmarks",
@@ -307,38 +325,38 @@ if (mode === CV) {
 const funding = new ContentSection("Academic Funding", {
     topDist: FIRST_TEXT_MARGIN,
     afterFirstTextMargin: 0,
-    rows   : [
+    rows: [
         {
             duration: "2018-09 to 2019-09",
-            desc    : "Robotics Institute Fellowship",
-            dollar  : 75000
+            desc: "Robotics Institute Fellowship",
+            dollar: 75000
         },
         {
             duration: "2013-09 to 2018-05",
-            desc    : "Shaw Admission Scholarship",
-            dollar  : 20000
+            desc: "Shaw Admission Scholarship",
+            dollar: 20000
         },
         {
             duration: "2015-05",
-            desc    : "Undergraduate Student Research Awards (USRA) " +
-                      "grant from Natural Sciences and Engineering Research Council of Canada (NSERC)",
-            dollar  : 6000
+            desc: "Undergraduate Student Research Awards (USRA) " +
+                "grant from Natural Sciences and Engineering Research Council of Canada (NSERC)",
+            dollar: 6000
         },
         {
             duration: "2013-09",
-            desc    : "Walter Scott Guest Memorial Scholarship",
-            dollar  : 5000
+            desc: "Walter Scott Guest Memorial Scholarship",
+            dollar: 5000
         },
     ]
 });
 
 const awards = new ContentSection("Awards", {
-    topDist             : FIRST_TEXT_MARGIN,
+    topDist: FIRST_TEXT_MARGIN,
     afterFirstTextMargin: 0,
-    rows                : [
+    rows: [
         {
-            duration : "2018-04",
-            desc     : "Engineering Science Award of Excellence",
+            duration: "2018-04",
+            desc: "Engineering Science Award of Excellence",
             reference: {
                 link: "http://johnsonzhong.me/res/grad/award_of_excellence.pdf",
                 text: "johnsonzhong.me/res/grad/award_of_excellence.pdf"
@@ -346,55 +364,55 @@ const awards = new ContentSection("Awards", {
         },
         {
             duration: "2018-01",
-            desc    : "3rd in Ontario Engineering Competition 2018 Programming category",
-            dollar  : 500,
+            desc: "3rd in Ontario Engineering Competition 2018 Programming category",
+            dollar: 500,
         },
         {
-            duration : "2016-03",
-            desc     : "<strong>1st</strong> in Ontario Engineering 2016 Competition Programming category",
-            dollar   : 2000,
+            duration: "2016-03",
+            desc: "<strong>1st</strong> in Ontario Engineering 2016 Competition Programming category",
+            dollar: 2000,
             reference: {
                 link: "http://johnsonzhong.me/projects/snowfun/",
                 text: "johnsonzhong.me/projects/snowfun",
             },
         },
         {
-            duration : "2015-10",
-            desc     : "<strong>1st</strong> in Canada in IEEEXtreme 9.0 (28/6800 globally)",
+            duration: "2015-10",
+            desc: "<strong>1st</strong> in Canada in IEEEXtreme 9.0 (28/6800 globally)",
             reference: {
                 link: "http://johnsonzhong.me/res/ieee9.pdf",
                 text: "johnsonzhong.me/res/ieee9.pdf",
             },
         },
         {
-            duration : "2015-01",
-            desc     : "Context.io API prize in PennApps Winter 2015",
-            dollar   : 500,
+            duration: "2015-01",
+            desc: "Context.io API prize in PennApps Winter 2015",
+            dollar: 500,
             reference: {
                 link: "https://devpost.com/software/snowball",
                 text: "devpost.com/software/snowball",
             },
         },
         {
-            duration : "2014-10",
-            desc     : "8th in Canada in IEEEXtreme 8.0 (52/6500 globally)",
+            duration: "2014-10",
+            desc: "8th in Canada in IEEEXtreme 8.0 (52/6500 globally)",
             reference: {
                 link: "http://johnsonzhong.me/res/ieee8.pdf",
                 text: "johnsonzhong.me/res/ieee8.pdf",
             },
         },
         {
-            duration : "2014-09",
-            desc     : "Google Cloud Platform prize in Hack the North 2015",
-            dollar   : 1000,
+            duration: "2014-09",
+            desc: "Google Cloud Platform prize in Hack the North 2015",
+            dollar: 1000,
             reference: {
                 link: "https://devpost.com/software/forenships",
                 text: "devpost.com/software/forenships",
             },
         },
         {
-            duration : "2013-10",
-            desc     : "6th in Canada in IEEEXtreme 7.0 (43/7500 globally)",
+            duration: "2013-10",
+            desc: "6th in Canada in IEEEXtreme 7.0 (43/7500 globally)",
             reference: {
                 link: "http://johnsonzhong.me/res/ieee.jpg",
                 text: "johnsonzhong.me/res/ieee.jpg",
@@ -405,10 +423,10 @@ const awards = new ContentSection("Awards", {
 
 const conference = new ContentSection("Conference Publications", {
     topDist: FIRST_TEXT_MARGIN,
-    rows   : [
+    rows: [
         {
             duration: "2023-02",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” Robotics: Science and Systems (<em>RSS</em>), 2023.',
+            desc: '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” Robotics: Science and Systems (<em>RSS</em>), 2023.',
             reference: {
                 link: "http://johnsonzhong.me/projects/chsel",
                 text: "link",
@@ -417,28 +435,28 @@ const conference = new ContentSection("Conference Publications", {
     ]
 });
 
-const publications = new ContentSection("Journal Publications", {
+const publications = new ContentSection("Publications", {
     topDist: FIRST_TEXT_MARGIN,
-    rows   : [
+    rows: [
         {
             duration: "2024-09",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “RUMI: Rummaging with Mutual Information,” IEEE Transactions on Robotics (<em>T-RO</em>), 2024. (under review)',
+            desc: '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “RUMI: Rummaging with Mutual Information,” IEEE Transactions on Robotics (<em>T-RO</em>), 2024. (under review)',
             // reference: {
             //     link: "http://johnsonzhong.me/projects/stucco",
             //     text: "link",
             // },
         },
-        // {
-        //     duration: "2023-02",
-        //     desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” <em>RSS</em>, 2023.',
-        //     reference: {
-        //         link: "http://johnsonzhong.me/projects/chsel",
-        //         text: "link",
-        //     },
-        // },
+        {
+            duration: "2023-02",
+            desc: '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “CHSEL: Producing Diverse Plausible Pose Estimates from Contact and Free Space Data,” Robotics: Science and Systems (<em>RSS</em>), 2023.',
+            reference: {
+                link: "http://johnsonzhong.me/projects/chsel",
+                text: "link",
+            },
+        },
         {
             duration: "2022-01",
-            desc    : '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” IEEE Robotics and Automation Letters (<em>RA-L</em>), vol. 7, no. 2, pp. 3507-3514, April 2022.',
+            desc: '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “Soft Tracking Using Contacts for Cluttered Objects to Perform Blind Object Retrieval,” IEEE Robotics and Automation Letters (<em>RA-L</em>), vol. 7, no. 2, pp. 3507-3514, April 2022.',
             reference: {
                 link: "http://johnsonzhong.me/projects/stucco",
                 text: "link",
@@ -446,7 +464,7 @@ const publications = new ContentSection("Journal Publications", {
         },
         {
             duration: "2021-02",
-            desc    : '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” IEEE Robotics and Automation Letters (<em>RA-L</em>), vol. 6, no. 2, pp. 1447-1454, April 2021.',
+            desc: '<strong>S. Zhong</strong>, Z. Zhang, N. Fazeli, and D. Berenson, “TAMPC: An Online Controller for Escaping Traps in Novel Environments,” IEEE Robotics and Automation Letters (<em>RA-L</em>), vol. 6, no. 2, pp. 1447-1454, April 2021.',
             reference: {
                 link: "http://johnsonzhong.me/projects/tampc",
                 text: "link",
@@ -454,7 +472,7 @@ const publications = new ContentSection("Journal Publications", {
         },
         {
             duration: "2018-01",
-            desc    : 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang et  al., “Vtr 8: High-performance CAD and Customizable FPGA Architecture Modelling,” ACM Transactions on Reconfigurable Technology and Systems (<em>TRETS</em>), vol. 13, no. 2, pp. 1-55, 2020. <strong>Best Paper Award.</strong>',
+            desc: 'K. E. Murray, O. Petelin, <strong>S. Zhong</strong>, J. M. Wang et  al., “Vtr 8: High-performance CAD and Customizable FPGA Architecture Modelling,” ACM Transactions on Reconfigurable Technology and Systems (<em>TRETS</em>), vol. 13, no. 2, pp. 1-55, 2020. <strong>Best Paper Award.</strong>',
             reference: {
                 link: "http://dl.acm.org/doi/10.1145/3388617",
                 text: "link",
@@ -465,10 +483,10 @@ const publications = new ContentSection("Journal Publications", {
 
 const teaching = new ContentSection("Teaching Experience", {
     topDist: FIRST_TEXT_MARGIN,
-    rows   : [
+    rows: [
         {
             duration: "2022-07 to 2023-01",
-            desc    : 'Graduate Student Instructor for ROB 502 Programming for Robotics (new course)',
+            desc: 'Graduate Student Instructor for ROB 502 Programming for Robotics (new course)',
             reference: {
                 link: "https://web.eecs.umich.edu/~dmitryb/courses/fall2022pfr/index.html",
                 text: "link",
@@ -482,32 +500,32 @@ const teaching = new ContentSection("Teaching Experience", {
     ]
 });
 
-const projects = new ContentSection("Projects", {
+const projects = new ContentSection("Open-source Software", {
     topDist: FIRST_TEXT_MARGIN,
-    rows   : [
-        activities.pytorch_kinematics, activities.mppi, // activities.aer201, activities.sal
+    rows: [
+        activities.pytorch_volumetric, activities.pytorch_kinematics, activities.mppi, // activities.aer201, activities.sal
     ]
 });
 
 const skills = new ContentSection("Software Skills", {
     pairs: {
-        Specialities     : "Asynchronous programming, Parallelization",
-        "Build tools"    : "CMake, Makefile, Catkin",
+        Specialities: "Asynchronous programming, Parallelization",
+        "Build tools": "CMake, Makefile, Catkin",
         "Version control": "Git, SVN",
-        Environments     : "ROS, Linux, Web, Arduino",
-        Libraries        : "PyTorch, numpy, cvxpy, Boost, QT, D3",
-        Simulators       : "PyBullet, MuJoCo",
-        "Code review"    : "Gerrit",
-        Integration      : "Buildbot, Jenkins",
-        Database         : "PostgreSQL, MySQL"
+        Environments: "ROS, Linux, Web, Arduino",
+        Libraries: "PyTorch, numpy, cvxpy, Boost, QT, D3",
+        Simulators: "PyBullet, MuJoCo",
+        "Code review": "Gerrit",
+        Integration: "Buildbot, Jenkins",
+        Database: "PostgreSQL, MySQL"
     }
 });
 
 const courses = new ContentSection("Courses", {
     pairs: {
-        "Heavy focus" : "Control, Machine learning, Modelling, MPC",
+        "Heavy focus": "Control, Machine learning, Modelling, MPC",
         "Medium focus": "Perception, Kinematics, Probability, Algorithms",
-        "Light focus" : "Economics, Marketing"
+        "Light focus": "Economics, Marketing"
     }
 });
 
@@ -529,13 +547,13 @@ const teachingHtml = datedTemplate(teaching);
 let html;
 if (mode === CV) {
     html = baseTemplate({
-        header : [
+        header: [
             contactHtml
         ],
         content: [
             educationHtml,
             publicationsHtml,
-            conferenceHtml,
+            // conferenceHtml,
             projectsHtml,
             fundingHtml,
             awardsHtml,
@@ -547,13 +565,13 @@ if (mode === CV) {
     });
 } else {
     html = baseTemplate({
-        header : [
+        header: [
             contactHtml
         ],
         content: [
             educationHtml,
             publicationsHtml,
-            conferenceHtml,
+            // conferenceHtml,
             projectsHtml,
             workHtml,
             researchHtml,
