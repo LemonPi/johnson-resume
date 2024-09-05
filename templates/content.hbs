@@ -9,6 +9,12 @@
                 {{reference.text}}
             </a>
         {{/if}}
+        {{#if github}}
+            <a class="reference" href="https://github.com/{{github}}">
+                github.com/{{github}}
+            </a>
+            <span id="{{github}}" class="stats"></span>
+        {{/if}}
     {{/unless}}
     {{#if status}}
         <span class="status">

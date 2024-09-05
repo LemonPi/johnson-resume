@@ -120,7 +120,7 @@ const education = new ContentSection("Education", {
             highlights: [
                 "Advisor: Dmitry Berenson, Co-advisor: Nima Fazeli",
                 "Dissertation: Contact-based Perception and Planning for Robotic Manipulation in Novel Environments",
-                "Committee: Dmitry Berenson, Nima Fazeli, Maani Ghaffari (Umich), Ken Goldberg (Berkeley)"
+                // "Committee: Dmitry Berenson, Nima Fazeli, Maani Ghaffari (Umich), Ken Goldberg (Berkeley)"
                 // "Cumulative GPA: 3.96/4.0",
             ]
         },
@@ -128,19 +128,12 @@ const education = new ContentSection("Education", {
             duration: "2013-09 to 2018-06",
             title: "<strong>B.ASc. in Engineering Science Robotics,</strong> University of Toronto",
             highlights: [
-                // {
-                //     desc     : "Engineering Science Robotics with high honors",
-                //     reference: {
-                //         link: "http://johnsonzhong.me/res/grad/degree.pdf",
-                //         text: "johnsonzhong.me/res/grad/degree.pdf",
-                //     },
-                // },
                 {
                     desc: "GPA: 3.91/4.0, Major GPA: 4.0/4.0, Class standing 2/161 with high honors",
-                    reference: {
-                        link: "http://johnsonzhong.me/res/grad/degree.pdf",
-                        text: "johnsonzhong.me/res/grad/degree.pdf",
-                    },
+                    // reference: {
+                    //     link: "http://johnsonzhong.me/res/grad/degree.pdf",
+                    //     text: "johnsonzhong.me/res/grad/degree.pdf",
+                    // },
                 }
                 // "<strong>Rank</strong> 2/161 in semester 5 | 5/158 in semester 6",
             ]
@@ -152,45 +145,33 @@ const activities = {
     pytorch_volumetric: {
         duration: "2022-06",
         title: "<strong>PyTorch Volumetric Data Structures</strong>",
-        caption: "Github",
-        reference: {
-            link: "https://github.com/UM-ARM-Lab/pytorch_volumetric",
-            text: "github.com/UM-ARM-Lab/pytorch_volumetric"
-        },
+        caption: " ",
+        github: "UM-ARM-Lab/pytorch_volumetric",
         tools: ["python", "PyTorch"],
         desc: "Signed distance functions (SDF), voxel grids, and other volumetric data structures accelerated on the GPU.",
         highlights: [
-            ">100 stars, >8 forks",
             "Fast parallel query across points for SDF value and gradients",
         ]
     },
     pytorch_kinematics: {
         duration: "2021-01",
         title: "<strong>PyTorch Differentiable Robot Kinematics</strong>",
-        caption: "Github",
-        reference: {
-            link: "https://github.com/UM-ARM-Lab/pytorch_kinematics",
-            text: "github.com/UM-ARM-Lab/pytorch_kinematics"
-        },
+        caption: " ",
+        github: "UM-ARM-Lab/pytorch_kinematics",
         tools: ["python", "PyTorch"],
         desc: "Parallel and differentiable robot forward kinematics and Jacobian calculation.",
         highlights: [
-            ">400 stars, >30 forks",
             "Load robot description from URDF, SDF, and MJCF formats",
         ]
     },
     mppi: {
         duration: "2020-01",
         title: "<strong>PyTorch Model Predictive Path Integral Controller</strong>",
-        caption: "Github",
-        reference: {
-            link: "https://github.com/UM-ARM-Lab/pytorch_mppi",
-            text: "github.com/UM-ARM-Lab/pytorch_mppi"
-        },
+        caption: " ",
+        github: "UM-ARM-Lab/pytorch_mppi",
         tools: ["python", "PyTorch"],
-        desc: "Batched and GPU friendly implementation of Model Predictive Path Integral (MPPI) controller.",
+        desc: "Batched and GPU accelerated Model Predictive Path Integral (MPPI) controller.",
         highlights: [
-            ">380 stars, >50 forks",
             "Novel kernel interpolation smoothing",
         ]
     },
@@ -238,7 +219,7 @@ const activities = {
         desc: "Verity Studios is an ETH spinoff specializing in indoor drone show systems.",
         highlights: [
             "Modelled novel indoors localization system using physics first principles",
-            "Enabled optimization of flight performance",
+            // "Enabled optimization of flight performance",
             "Achieved <strong>correlation of 0.86</strong> (95% confidence >0.80) against experimental performance",
         ]
     },
@@ -305,12 +286,12 @@ const workExperience = new ContentSection("Work Experience", {
 });
 
 if (mode === CV) {
-    researchExperience.rows = [activities.thesis, activities.verity, activities.fpga];
+    researchExperience.rows = [activities.verity, activities.fpga];
 } else {
     const verityResearch = Object.assign({}, activities.verity);
     verityResearch.desc = "";
 
-    researchExperience.rows = [activities.thesis, verityResearch, activities.fpga];
+    researchExperience.rows = [verityResearch, activities.fpga];
     // more work focus on resume
     activities.verity.desc += " I designed and implemented a robust parameters system.";
     activities.verity.highlights = [
@@ -486,13 +467,13 @@ const teaching = new ContentSection("Teaching Experience", {
     rows: [
         {
             duration: "2022-07 to 2023-01",
-            desc: 'Graduate Student Instructor for ROB 502 Programming for Robotics (new course)',
+            desc: '<strong>Graduate Student Instructor</strong>, ROB 502 Programming for Robotics',
             reference: {
                 link: "https://web.eecs.umich.edu/~dmitryb/courses/fall2022pfr/index.html",
                 text: "link",
             },
             highlights: [
-                "Designed assignments, labs, and quizzes ",
+                "Designed assignments, labs, and quizzes (new course)",
                 "Set up automated grading for assignments and quizzes ",
                 "Led weekly 2 hour interactive labs ",
             ]

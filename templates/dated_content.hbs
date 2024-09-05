@@ -20,6 +20,12 @@
                                 {{reference.text}}
                             </a>
                         {{/if}}
+                        {{#if github}}
+                            <a class="reference" href="https://github.com/{{github}}">
+                                github.com/{{github}}
+                            </a>
+                            <span id="{{github}}" class="stats"></span>
+                        {{/if}}
                         {{#if tools}}
                             <span class="tools-span">
                                 {{#each tools}}<a class="tools">{{{this}}}</a>{{/each}}
