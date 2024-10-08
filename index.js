@@ -184,15 +184,12 @@ const activities = {
             text: "keplercommunications.com"
         },
         tools: ["python", "asyncio", "SQL"],
-        desc: "Kepler is a Toronto startup providing communication services with low earth orbit " +
-            "satellites. Challenges from this situation include communication opportunities " +
-            "being limited to when the satellite is above a ground station (a pass), and frequently " +
-            "dropped packets.",
+        desc: "Kepler is a Toronto startup providing communication services with low earth orbit satellites.",
         highlights: [
-            "Designed and developed mission control backend for commanding and communicating with satellites to replace 3rd party software",
-            "Scaled communication to potentially tens of satellites simultaneously",
-            "Modularized architecture to allow for handling of any communication protocol without affecting interaction logic",
-            "Allowed for task scheduling and progress saving across passes"
+            "Designed and developed asynchronous mission control backend for communicating with satellites",
+            // "Scaled communication to potentially tens of satellites simultaneously",
+            // "Modularized architecture to allow for handling of any communication protocol without affecting interaction logic",
+            // "Allowed for task scheduling and progress saving across passes"
         ]
     },
     thesis: {
@@ -218,9 +215,10 @@ const activities = {
         tools: ["C++", "QT", "boost"],
         desc: "Verity Studios is an ETH spinoff specializing in indoor drone show systems.",
         highlights: [
-            "Modelled novel indoors localization system using physics first principles",
+            "Modelled novel drone indoors localization system using physics first principles",
             // "Enabled optimization of flight performance",
             "Achieved <strong>correlation of 0.86</strong> (95% confidence >0.80) against experimental performance",
+            "Designed and developed parameter server firmware used across different hardware platforms",
         ]
     },
     fpga: {
@@ -283,6 +281,7 @@ const researchExperience = new ContentSection("Research Projects", {
 
 const workExperience = new ContentSection("Work Experience", {
     topDist: FIRST_TEXT_MARGIN,
+    rows: [activities.kepler, activities.verity],
 });
 
 if (mode === CV) {
@@ -300,7 +299,6 @@ if (mode === CV) {
         "PC software can modify parameters on <strong>all hardware platforms and versions</strong> without recompilation",
         "Simplified usage so much that a coworker wrote: <a class='quote'>Tears of joy come to my eyes seeing how much simpler the code becomes</a>"
     ];
-    workExperience.rows = [activities.kepler, activities.verity];
 }
 
 const funding = new ContentSection("Academic Funding", {
@@ -538,7 +536,8 @@ if (mode === CV) {
             projectsHtml,
             fundingHtml,
             awardsHtml,
-            researchHtml,
+            workHtml,
+            // researchHtml,
             teachingHtml,
             languageHtml,
             skillsHtml,
