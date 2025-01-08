@@ -142,6 +142,11 @@ const education = new ContentSection("Education", {
 });
 
 const activities = {
+    cruise: {
+        duration: "2024-12",
+        title: "<strong>Senior Applied Scientist, Simulation</strong> at Cruise",
+        desc: "Cruise makes autonomous vehicles and provides robotaxi services."
+    },
     pytorch_volumetric: {
         duration: "2022-06",
         title: "<strong>PyTorch Volumetric Data Structures</strong>",
@@ -281,8 +286,14 @@ const researchExperience = new ContentSection("Research Projects", {
 
 const workExperience = new ContentSection("Work Experience", {
     topDist: FIRST_TEXT_MARGIN,
-    rows: [activities.kepler, activities.verity],
+    // rows: [activities.cruise, activities.kepler, activities.verity],
+    rows: [activities.cruise],
 });
+
+const internships = new ContentSection("Internships", {
+    topDist: FIRST_TEXT_MARGIN,
+    rows: [activities.kepler, activities.verity],
+})
 
 if (mode === CV) {
     researchExperience.rows = [activities.verity, activities.fpga];
@@ -522,6 +533,7 @@ const workHtml = datedTemplate(workExperience);
 const skillsHtml = listTemplate(skills);
 const coursesHtml = listTemplate(courses);
 const teachingHtml = datedTemplate(teaching);
+const internshipHtml = datedTemplate(internships);
 
 let html;
 if (mode === CV) {
@@ -531,12 +543,13 @@ if (mode === CV) {
         ],
         content: [
             educationHtml,
+            workHtml,
             publicationsHtml,
             // conferenceHtml,
             projectsHtml,
+            internshipHtml,
             fundingHtml,
             awardsHtml,
-            workHtml,
             // researchHtml,
             teachingHtml,
             languageHtml,
