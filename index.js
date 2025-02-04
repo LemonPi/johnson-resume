@@ -145,7 +145,10 @@ const activities = {
     cruise: {
         duration: "2024-12",
         title: "<strong>Senior Applied Scientist, Simulation</strong> at Cruise",
-        desc: "Cruise makes autonomous vehicles and provides robotaxi services."
+        desc: "Cruise works on vehicle autonomy.",
+        highlights: [
+            "EXtended internal VLM framework to handle simulation data",
+        ]
     },
     pytorch_volumetric: {
         duration: "2022-06",
