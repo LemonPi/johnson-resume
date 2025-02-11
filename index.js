@@ -147,7 +147,7 @@ const activities = {
         title: "<strong>Senior Applied Scientist, Simulation</strong> at Cruise",
         desc: "Cruise works on vehicle autonomy.",
         highlights: [
-            "EXtended internal VLM framework to handle simulation data",
+            "Extended internal VLM framework to handle simulation data",
         ]
     },
     pytorch_volumetric: {
