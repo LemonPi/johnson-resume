@@ -147,7 +147,7 @@ const activities = {
         title: "<strong>Senior Applied Scientist, Simulation</strong> at Cruise",
         desc: "Cruise works on vehicle autonomy.",
         highlights: [
-            "Extended internal VLM framework to handle simulation data",
+            "VLM-based framework for processing road and simulated data",
         ]
     },
     pytorch_volumetric: {
@@ -433,7 +433,7 @@ const publications = new ContentSection("Publications", {
     rows: [
         {
             duration: "2024-09",
-            desc: '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “RUMI: Rummaging with Mutual Information,” IEEE Transactions on Robotics (<em>T-RO</em>), 2024. (under review)',
+            desc: '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “RUMI: Rummaging with Mutual Information,” IEEE Transactions on Robotics (<em>T-RO</em>), 2024. (accepted)',
             // reference: {
             //     link: "http://johnsonzhong.me/projects/stucco",
             //     text: "link",
