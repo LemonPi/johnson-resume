@@ -434,10 +434,10 @@ const publications = new ContentSection("Publications", {
         {
             duration: "2024-09",
             desc: '<strong>S. Zhong</strong>, N. Fazeli, and D. Berenson, “RUMI: Rummaging with Mutual Information,” IEEE Transactions on Robotics (<em>T-RO</em>), vol. 41, pp. 5431-5450, 2025.',
-            // reference: {
-            //     link: "http://johnsonzhong.me/projects/stucco",
-            //     text: "link",
-            // },
+            reference: {
+                link: "https://ieeexplore.ieee.org/document/11146909",
+                text: "link",
+            },
         },
         {
             duration: "2023-02",
