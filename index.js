@@ -142,10 +142,18 @@ const education = new ContentSection("Education", {
 });
 
 const activities = {
+    sunday: {
+        duration: "2026-1",
+        title: "<strong>Robotics Research Engineer</strong> at Sunday",
+        desc: "Helpful humanoid home robots.",
+        highlights: [
+            "Whole body control and planning",
+        ]
+    },
     cruise: {
-        duration: "2024-12",
+        duration: "2024-12 to 2026-1",
         title: "<strong>Senior Applied Scientist, Simulation</strong> at Cruise",
-        desc: "Cruise works on vehicle autonomy.",
+        desc: "Vehicle autonomy.",
         highlights: [
             "VLM-based framework for processing road and simulated data",
         ]
@@ -290,7 +298,7 @@ const researchExperience = new ContentSection("Research Projects", {
 const workExperience = new ContentSection("Work Experience", {
     topDist: FIRST_TEXT_MARGIN,
     // rows: [activities.cruise, activities.kepler, activities.verity],
-    rows: [activities.cruise],
+    rows: [activities.sunday, activities.cruise],
 });
 
 const internships = new ContentSection("Internships", {
@@ -566,10 +574,10 @@ if (mode === CV) {
         ],
         content: [
             educationHtml,
+            workHtml,
             publicationsHtml,
             // conferenceHtml,
             projectsHtml,
-            workHtml,
             researchHtml,
             awardsHtml,
             languageHtml,
